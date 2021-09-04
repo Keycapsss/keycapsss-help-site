@@ -22,3 +22,4 @@ bootloader
 macos
 eeprom
 config
+keycapsss
