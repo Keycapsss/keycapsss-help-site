@@ -8,19 +8,34 @@ Lily58L is 6×4+4keys column-staggered split keyboard.
 
 It is a modified version of the Lily58 Pro pcb from [kata0510](https://github.com/kata0510)
 and has the the following additional features.
-- one rotary encoder support on each side
-- underglow with SK6812 Mini RGB led's (6 per side)
-- per key RGB led with SK6812 Mini-E led (with legs, easy to solder)
 
-**[Build-Guide](buildguide_en.md)**
+- One rotary encoder support on each side (optional)
+- Optional Pimoroni Trackball (on master side)
+- Underglow with WS2812 (5050) RGB LED's (6 per side)
+- Per switch RGB LED with SK6812 Mini-E led (with legs, easy to solder)
 
-**Hardware available at [keycapsss.com](https://keycapsss.com)**
+## [Build-Guide](buildguide_en.md)
 
-![](img/Lily58L-pcb-1.png)
-![](img/Lily58L-pcb-2.png)
+**Hardware available at [keycapsss.com](https://keycapsss.com/keyboard-parts/pcbs/71/lily58l-split-keyboard-pcb)**
 
+![Lily58L PCB](img/Lily58L-pcb-2.png)
+![Lily58L PCB](img/Lily58L-pcb-1.png)
 
-# Parts
+## Changelog
+
+### Rev1.3
+
+- Change underglow footprint to WS2812 (5050) (easier to solder)
+- Add footprint for optional [Pimoroni Trackball Module](https://keycapsss.com/keyboard-parts/parts/157/pimoroni-trackball-breakout-i2c) (most inner position)
+- Improve silkscreen
+
+### REV1
+
+- Add per switch RGB LED's (SK6812 Mini-E)
+- Add underglow RGB LED's (SK6812 Mini)
+- Add footprint for an optional rotary encoder
+
+## Parts
 
 Part name | Quantity | Remarks | Photo |
 | ------- | -------- | ------- | ----- |
@@ -36,26 +51,25 @@ Part name | Quantity | Remarks | Photo |
 | Key caps | 58 pcs | 1.5U caps, can also be 1U ||
 | Micro USB or USB-C cable | 1 pcs | Dependent what you use on the master half. ||
 
-
-## Optionally:
+### Optionally
 
 Part name | Quantity | Remarks | Photo |
 | ------- | -------- | ------- | ----- |
 | [OLED module](https://keycapsss.com/keyboard-parts/parts/80/ssd1306-oled-lcd-display-0.91-inch-128x32-i2c-white) | 2 pcs | It is possible to use only one display ||
-| SK6812 Mini | 12 pcs | RGB led's for underglow ||
-| SK6812 Mini-E | 58 pcs |RGB led's for keycap backlight **(underglow led's must be soldered, because they are connected in series)** ||
+| WS2812 (5050) | 12 pcs | RGB LED's for underglow ||
+| SK6812 Mini-E | 58 pcs |RGB LED's for keycap backlight **(underglow LED's must be soldered, because they are connected in series)** ||
 
-## Firmware:
+## Firmware
+
 Clone/download the QMK firmware and execute the following in the [qmk_firmware](https://github.com/qmk/qmk_firmware) directory to write the default Lily58L keymap
 
     make lily58/light:lily58l:avrdude
-
 
 When **`Detecting USB port, reset your controller now...`** is displayed, press the reset button on the keyboard to start writing.
 Each half of the keyboard must be programmed separately using this approach.
 
 If you're using DFU bootloader (in case of the elite c), replace the 'avrdude' with 'dfu'
 
-## Schematic:
+## Schematic
 
 [![Lily58L schematic](img/Lily58L-schematic.png)](img/Lily58L-schematic.png?raw=true)
