@@ -1,4 +1,4 @@
-# Lily58L Pro Build Guide
+# Lily58L Build Guide
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/firstcontributions/first-contributions)
 [![Discord](https://img.shields.io/discord/548530462419582996?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/frjFXZB "Redirect to Keycapsss Discord")
@@ -9,13 +9,14 @@
 - [BOM](#bom)
 - [Introduction](#introduction)
 - [Attach the diodes](#attach-the-diodes)
-- [Solder the led's for underglow optionally](#solder-the-leds-for-underglow-optionally)
-- [Solder the led's for keycap back optionally](#solder-the-leds-for-keycap-back-optionally)
+- [Solder the LED's for underglow optionally](#solder-the-leds-for-underglow-optionally)
+- [Solder the LED's for per switch RGB optionally](#solder-the-leds-for-per-switch-rgb-optionally)
 - [Soldering the TRRS jack and reset switch](#soldering-the-trrs-jack-and-reset-switch)
-- [Attach the OLED display](#attach-the-oled-display)
+- [Preparations for the OLED display](#preparations-for-the-oled-display)
 - [Install Pro Micro with sockets](#install-pro-micro-with-sockets)
-- [Solder the rotary encoder](#solder-the-rotary-encoder)
+- [Solder the rotary encoder optionally](#solder-the-rotary-encoder-optionally)
 - [Solder the sockets](#solder-the-sockets)
+- [Install the Pimoroni Trackball optionally](#install-the-pimoroni-trackball-optionally)
 - [Case assembly](#case-assembly)
 - [Flash keymap on Pro Micro](#flash-keymap-on-pro-micro)
 - [Default keymap](#default-keymap)
@@ -25,6 +26,8 @@
 - [Use "Per Key" LED's without underglow LED's](#use-per-key-leds-without-underglow-leds)
 
 <!-- /TOC -->
+
+You can find the build guide for Rev1 [here](https://github.com/Keycapsss/Lily58L-Build-Guide/blob/rev1/buildguide_en.md).
 
 ## BOM
 
@@ -48,15 +51,14 @@ Part name | Quantity | Remarks | Photo |
 
 Part name | Quantity | Remarks | Photo |
 | ------- | -------- | ------- | ----- |
-| [OLED module](https://keycapsss.com/keyboard-parts/parts/80/ssd1306-oled-lcd-display-0.91-inch-128x32-i2c-white) | 2 pcs | It is possible to use only one display ||
-| SK6812 Mini | 12 pcs | RGB led's for underglow ||
-| SK6812 Mini-E | 58 pcs |RGB led's for keycap backlight **(underglow led's must be soldered, because they are connected in series)** ||
+| [OLED module 0.91](https://keycapsss.com/keyboard-parts/parts/80/ssd1306-oled-lcd-display-0.91-inch-128x32-i2c-white) | 2 pcs | It is possible to use only one display ||
+| WS2812 (5050) | 12 pcs | RGB LED's for underglow ||
+| SK6812 Mini-E | 58 pcs |RGB LED's for keycap backlight **(underglow LED's must be soldered, because they are connected in series)** ||
 
 ## Introduction
 
-**Note that the case of the black version has a scratch-resistant paint (solder resist) that can arrive with scratches from shipping and transportation. This is the nature of the product.** 
-
-**In addition, please be careful, as the case will be scratched if it hits or rubs a hard thing after assembly.**
+> Note that the case of the black version has a scratch-resistant paint (solder resist) that can arrive with scratches from shipping and transportation. This is the nature of the product.
+> In addition, please be careful, as the case will be scratched if it hits or rubs a hard thing after assembly.
 
 This PCB is reversible. We will mount parts **on each side.**
 
@@ -80,35 +82,36 @@ Apply preliminary solder (melt a small amount on the substrate) on one pad of th
 
 Then use tweezers to solder one side of the diode, using the pre-soldering to secure the diode.
 
+Then solder the remaining side.
+
 ![](img/smd-diode-solder-2.jpg)
 
-Then solder the remaining side.
-  
 When all diodes have been soldered, check for missing spots.
 
-![](img/smd-diode-solder-3.jpg)
+*[Placeholder: image with all diode marked]* 
 
-You can use a multimeter on the front side of the board to ensure that the solder connections are good and that the orientation of the diodes is correct.
+> You can use a multimeter on the front side of the board to ensure that the solder connections are good and that the orientation of the diodes is correct.
 
-## Solder the led's for underglow (optionally)
+## Solder the LED's for underglow (optionally)
 
-Solder the SK6812 Mini led's (without legs), to the marked positions on the **back side** of the board.
+Solder the WS2812 LED's (without legs), to the marked positions on the **back side** of the board.
 
-![SK6812 Mini RGB led's](img/sk6812-mini-led-1.jpg)
+![SK6812 Mini RGB LED's](img/ws2812-led-1.jpg)
 
-**Pay attention to orientation of the led's.**
+**Pay attention to orientation of the LED's.**
 
-![SK6812-Mini led orientation](img/sk6812-mini-led-2.jpg)
+![SK6812-Mini led orientation](img/ws2812-led-2.png)
 
-The led's are connected in series. If a led is broken or has bad solder connections, the following led's will not light up.
+The LED's are connected in series. If a LED is broken or has bad solder connections, the following LED's will not light up.
 
-## Solder the led's for keycap back (optionally)
-> **It is necessary to solder all SK6812 Mini led's (underglow) in the previous step, to use the led's for the keycaps (all LED's are connected in series).**
+## Solder the LED's for per switch RGB (optionally)
 
-Solder the SK6812 Mini-E led's (with legs), on the **back side** of the board.  
-**Pay attention to orientation of the led's.**
+> It is necessary to solder all WS2812 LED's (underglow) in the previous step, to use the LED's for the per switch RGB (all LED's are connected in series).
 
-We solder LED's using the same approach as for the diodes.In that case: tin one pad, put the LED on, reflow, solder the other three pins.
+Solder the SK6812 Mini-E LED's (with legs), on the **back side** of the board.  
+**Pay attention to orientation of the LED's.**
+
+We solder LED's using the same approach as for the diodes. In that case: tin one pad, put the LED on, reflow, solder the other three pins.
 
 ![](img/sk6812-mini-e-led-1.jpg)
 
@@ -116,16 +119,12 @@ Correct orientation from the front view.
 
 ![](img/sk6812-mini-e-led-4.jpg)
 
-Begin by pre-soldering one side of the Led pad, place the component, and hold it in place with tweezers.
-
-![](img/sk6812-mini-e-led-2.jpg)
-
-It is necessary to solder all led's, even if you use the rotary encoder.
+It is necessary to solder all LED's, even if you use the rotary encoder.
 
 ![](img/sk6812-mini-e-led-3.jpg)
 
 For the LED's it's important to keep the heating as short as possible. Try to not touch the LED itself with the iron but rather only the solder that's supposed to connect to the metal pin. Use flux. 
-The led's are connected in series. If a led is broken or has bad solder connections, the following led's will either not light up at all or will light up in a different color than the default (red).
+The LED's are connected in series. If a led is broken or has bad solder connections, the following LED's will either not light up at all or will light up in a different color than the default (red).
 Double-check the last LED that lights up properly and the first that doesn't.
 On the LED's with legs it's easily possible to get a loose connection. 
 
@@ -138,7 +137,7 @@ Attach the parts and fix them temporarily with masking tape. Turn over the board
 
 **be careful** don't be careless doing this part. TRRS jacks are parts you can indeed mess up. I promise.
 
-## Attach the OLED display
+## Preparations for the OLED display
 
 On the **front side** of the board, apply enough solder to bridge the four jumper terminals in the Pro Micro section.
 
@@ -146,9 +145,17 @@ On the **front side** of the board, apply enough solder to bridge the four jumpe
 
 Attach the connector for the OLED on front side (opposite side of diodes). Be careful to avoid adding a lot of solder, as it is easy for solder to flow into the connector.
 
+### Some tips for installing the OLED on the socket
+
+- if you soldered the socket for the OLED, remove the black plastic thingy that's part of the header installed in the OLED. The you'll be able to shorten it's legs with your pliers and put them into the socket, resulting into a way more low profile OLED.  
+- If you do not have sockets installed, you can add height to the oled, by removing pins out of headers, and putting the empty black plastics part onto the headers of the OLED.
+
+> Add image here: "Soldered 4pin socket for Oled"
+
 ## Install Pro Micro (with sockets)
 
-**Before installing the Pro Micro, no matter which (can also happen on the Elite C), check whether they are working by plugging them in and flashing the default keymap.**
+**Before installing the Pro Micro (or other Micro Controller), check whether they are working by plugging them in and flashing the default keymap.  
+[You can find more information about this topic here.](#flash-keymap-on-pro-micro)**
 
 **When Installing the Pro Micro Puchi-C or Elite C, be sure it has the right orientation! The chips on the Board have to face downward and the USB Port is on the upper edge of your Board.**
 
@@ -179,22 +186,15 @@ Solder the pins and shorten the pins with diagonal pliers.
 
 For other ways to mount your Pro Micros, look at [the crkbd build guide.](https://nicedoc.io/foostan/crkbd/blob/master/corne-classic/doc/buildguide_en.md#using-pin-sockets)
 
-Before you ask: The Procedure is absolutely identical for the Elite-C.
+The Procedure is absolutely identical for Pro Micro clones like Puchi-C, Elite-C, or similar.
 
-### Some tips for installing the OLED on the socket
-
-- if you soldered the socket for the OLED, remove the black plastic thingy that's part of the header installed in the OLED. The you'll be able to shorten it's legs with your pliers and put them into the socket, resulting into a way more low profile OLED.  
-- If you do not have sockets installed, you can add height to the oled, by removing pins out of headers, and putting the empty black plastics part onto the headers of the OLED.
-
-> Add image here: "Soldered 4pin socket for Oled"
-
-## Solder the rotary encoder
+## Solder the rotary encoder (optionally)
 
 Soldering the rotary encoder is as simple as any other component. Put the encoder from the front into the holes on the PCB, just below the screen, and solder it from the back.
 
 **Tip** Depending on your case you should first try and bend the rotary encoder legs a bit before soldering it in. The legs can prevent your case from closing completely, as it will rest on the protruding legs. Bending the pins so that they are flush with the encoder helps here. (you can also just clip them off)
 
-**For your information.** The top **two** legs serve as a simple connection that is closed by the rotary encoders tactile press. It's connected to the pins a switch would be connected to, if there were on in the place of the rotary encoder. Therefore, in your firmware the rotary encoder will serve, among other things, as a switch in the matrix.
+> The top **two** legs serve as a simple connection that is closed by the rotary encoders tactile press. It's connected to the pins a switch would be connected to, if there were on in the place of the rotary encoder. Therefore, in your firmware the rotary encoder will serve, among other things, as a switch in the matrix.
 The lower three pins do the actual rotary-encoding part
 
 ### You have reached a checkpoint
@@ -211,14 +211,72 @@ The sockets are mounted on the **back side**, the same side as the diodes.
 Much like the approach used for the diodes above, begin by pre-soldering one side of the socket pad, place the component, and hold it in place with tweezers. (The sockets can also be held in place by hand, but please take extra care not to burn yourself.)
 The image shows a soldered MX socket.
 
-The sockets take **way** more solder than the other components like the LED's and the diodes. But don't exaggerate... 
+The sockets take **way** more solder than the other components like the LED's and the diodes. But don't exaggerate...
 
-> Add image here: "Kailh hot swap sockets"
+![Kailh Hot-Swap Sockets](/img/kailh-sockets-1.jpg)
+
+## Install the Pimoroni Trackball (optionally)
+
+**The trackball module will only work on the master side (side with USB connection).** This is related to the communication between the two half of the keyboard.
+
+Solder the included header pin to the module.
+
+![Pimoroni Trackball Header Pins](img/pimoroni-trackball-module-1.jpg)
+
+Carefully remove the black plastic from the pins.  
+With a pliers you can push up the plastic, to remove it.
+
+![Pimoroni Trackball remove plastic](img/pimoroni-trackball-module-2.jpg)
+
+Add isolation tape to the back side of the trackball module.
+
+![Pimoroni Trackball isolation tape](img/pimoroni-trackball-module-3.jpg)
+
+Bridge the jumper on the top side of the pcb.
+
+![Pimoroni Trackball bridge jumper](img/pimoroni-trackball-module-4.jpg)
+
+Attach (not solder) the trackball module to the pcb. Then put the case top plate on top and fix it with 2-4 switches.  
+This way the trackball module sits perfect in the right place.  
+Now you can solder the trackball module pins from the back side.
+
+![Pimoroni Trackball remove plastic](img/pimoroni-trackball-module-5.jpg)
 
 ## Case assembly
 
 ### Attach the spacer
-
+- [Lily58L Build Guide](#lily58l-build-guide)
+	- [BOM](#bom)
+		- [Required parts](#required-parts)
+		- [Optionally parts](#optionally-parts)
+	- [Introduction](#introduction)
+	- [Attach the diodes](#attach-the-diodes)
+	- [Solder the LED's for underglow (optionally)](#solder-the-leds-for-underglow-optionally)
+	- [Solder the LED's for per switch RGB (optionally)](#solder-the-leds-for-per-switch-rgb-optionally)
+	- [Soldering the TRRS jack and reset switch](#soldering-the-trrs-jack-and-reset-switch)
+	- [Preparations for the OLED display](#preparations-for-the-oled-display)
+		- [Some tips for installing the OLED on the socket](#some-tips-for-installing-the-oled-on-the-socket)
+	- [Install Pro Micro (with sockets)](#install-pro-micro-with-sockets)
+	- [Solder the rotary encoder (optionally)](#solder-the-rotary-encoder-optionally)
+		- [You have reached a checkpoint](#you-have-reached-a-checkpoint)
+	- [Solder the sockets](#solder-the-sockets)
+	- [Install the Pimoroni Trackball (optionally)](#install-the-pimoroni-trackball-optionally)
+	- [Case assembly](#case-assembly)
+		- [Attach the spacer](#attach-the-spacer)
+		- [Attach the key switch](#attach-the-key-switch)
+		- [Pro Micro protective acrylic installation](#pro-micro-protective-acrylic-installation)
+	- [Flash keymap on Pro Micro](#flash-keymap-on-pro-micro)
+	- [Default keymap](#default-keymap)
+	- [Operation check](#operation-check)
+		- [Congratulations(?)](#congratulations)
+	- [When in trouble](#when-in-trouble)
+		- [Q. One or more rows/columns of key switches do not respond](#q-one-or-more-rowscolumns-of-key-switches-do-not-respond)
+		- [Q. A single key switch doesn't respond](#q-a-single-key-switch-doesnt-respond)
+		- [Q. A symbol different from the symbol input by "@" or "[" etc. is input (on Windows, etc.)](#q-a-symbol-different-from-the-symbol-input-by--or--etc-is-input-on-windows-etc)
+	- [Customize the default keymap](#customize-the-default-keymap)
+		- [Edit keymap.c and customize](#edit-keymapc-and-customize)
+		- [Handedness by EEPROM](#handedness-by-eeprom)
+	- [Use "Per Key" LED's without underglow LED's](#use-per-key-leds-without-underglow-leds)
 Attach four 10mm round spacers to the holes near Pro Micro.
 It's easy to insert a screw from the back of the board and attach the spacer from the top.
 ![2019-01-26 15 02 38](https://user-images.githubusercontent.com/6285554/51967859-c0913b00-24b3-11e9-966c-f3621ed398e5.jpg)
@@ -293,7 +351,8 @@ If something doesn't work:
 
 ### Q. One or more rows/columns of key switches do not respond
 
-A. The Pro Micro board may not be soldered and attached firmly. Check again, and re-solder and reinstall if necessary.
+A. The Pro Micro board may not be soldered and attached firmly. Check again, and re-solder and reinstall if necessary.  
+Also check the solder points for bridges.
 
 ### Q. A single key switch doesn't respond
 
@@ -331,18 +390,20 @@ After changing the keymap,
 If you get an error, please double-check the board, connection and command.
 
 ### Handedness by EEPROM
-You can tell each side of the Keyboard, whether it's left or right, by writing it into it's eeprom. 
-In order to do so, first put 
 
-	#define EE_HANDS
+You can tell each side of the Keyboard, whether it's left or right, by writing it into it's eeprom.  
+In order to do so, first put
 
-into your config.h. 
-Then flash the keymap with 
-	
-	make make lily58/light:(yourkeymap):avrdude-split-left 
+    #define EE_HANDS
+
+into your `config.h`.  
+Then flash the keymap with
+
+    make make lily58/light:(yourkeymap):avrdude-split-left 
 and
 
-	make make lily58/light:(yourkeymap):avrdude-split-right
+    make make lily58/light:(yourkeymap):avrdude-split-right
+
 respectively.
 If you're using DFU bootloader (in case of the elite c), replace the 'avrdude' with 'dfu'
 
@@ -350,10 +411,8 @@ From then on, your keyboard will know, which side they are, no matter which side
 
 ## Use "Per Key" LED's without underglow LED's
 
-If you don't want to use the underglow function with the SK6812-Mini LED's, then bridget the solder pads on the following pictures with a small wire.
+If you don't want to use the underglow function with the WS2812 LED's, then bridget the solder pads on the following pictures with a small wire.
 
 ![Left half - bridge underglow](img/lily58l-bridge-underglow-1.png)
 
 ![Right half - bridge underglow](img/lily58l-bridge-underglow-2.png)
-
-++ctrl+alt+delete++
