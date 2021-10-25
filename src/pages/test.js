@@ -3,7 +3,7 @@ import { graphql } from 'gatsby'
 import Layout from '../components/layout'
 import PostLink from '../components/post-link'
 
-const IndexPage = ({
+const TestPage = ({
   data: {
     allSitePage: { edges },
   },
@@ -14,12 +14,12 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <div className="prose md:prose-lg xl:prose-xl">{Pages}</div>
+      <div className="prose md:prose-lg xl:prose-xl">Foobar Test</div>
     </Layout>
   )
 }
 
-export default IndexPage
+export default TestPage
 
 export const pageQuery = graphql`
   query {

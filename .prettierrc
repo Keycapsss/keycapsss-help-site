@@ -1,0 +1,15 @@
+{
+  "arrowParens": "avoid",
+  "semi": false,
+  "jsxBracketSameLine": true,
+  "trailingComma": "all",
+  "singleQuote": true,
+  "overrides": [
+    {
+      "files": "src/**/*.md",
+      "options": {
+        "parser": "mdx"
+      }
+    }
+  ]
+}

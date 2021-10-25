@@ -1,0 +1,37 @@
+{
+	"folders": [
+    {
+      "name": "gatsby-keycapsss-faq",
+      "path": "../gatsby-keycapsss-faq"
+    },
+    {
+      "path": "../keycapsss-faq-site"
+    }
+  ],
+  "settings": {
+    "cSpell.words": [
+      "frontmatter",
+      "gatsbyjs",
+      "semibold",
+      "tailwind"
+    ]
+  },
+  // Set the default
+  "editor.formatOnSave": false,
+  // Enable per-language
+  "[javascript]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "markdownlint.config": {
+    "MD033": false
+  }
+}

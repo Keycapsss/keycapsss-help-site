@@ -1,0 +1,14 @@
+public
+static
+
+.vscode
+
+*.min.js
+**/node_modules/**
+
+# cache-dirs
+**/.cache
+
+# npm
+package.json
+package-lock.json
