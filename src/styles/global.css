@@ -3,12 +3,32 @@
 @tailwind utilities;
 
 @layer base {
-  h1[id],
-  h2[id],
-  h3[id],
-  h4[id],
-  h5[id],
-  h6[id] {
-      scroll-margin-top: 5rem;
+  main {
+    min-height: calc(100vh - 200px);
+  }
+
+  .gatsby-highlight-code-line {
+	  background: #312f44;
+	  box-shadow: inset 5px 0 0 #e0def4;
+    display: block;
+    padding-left: 10px;
+  }
+
+  .command-line-prompt {
+    margin-right: 0 !important;
+  }
+  .command-line-prompt > span:before {
+    color: #999;
+    content: " ";
+    display: block;
+  }
+  .command-line-prompt > span[data-user]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] $";
+  }
+  .command-line-prompt > span[data-user="root"]:before {
+    content: "[" attr(data-user) "@" attr(data-host) "] #";
+  }
+  .command-line-prompt > span[data-prompt]:before {
+    content: attr(data-prompt);
   }
 }

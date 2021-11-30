@@ -1,7 +1,10 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+
 import Layout from '../components/layout'
+import Seo from '../components/seo'
 import PostLink from '../components/post-link'
+import Iframe from '../components/iframe'
 
 const IndexPage = ({
   data: {
@@ -14,7 +17,15 @@ const IndexPage = ({
 
   return (
     <Layout>
-      <div className="prose md:prose-lg xl:prose-xl">{Pages}</div>
+      <Seo title="Build-Guides, FAQ, Product Restock" />
+      <main className="w-full prose max-w-none md:prose-lg xl:prose-xl">
+        <Iframe
+          src="https://trello.com/b/99fbRrEe.html"
+          width="100%"
+          height="600px"
+        />
+        {/* {Pages} */}
+      </main>
     </Layout>
   )
 }

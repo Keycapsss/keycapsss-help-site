@@ -1,5 +1,5 @@
 const path = require('path')
-const mainTemplate = path.resolve('src/templates/docs.js')
+const docsTemplate = path.resolve('src/templates/docs.js')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
   const { createNodeField } = actions
@@ -9,14 +9,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     // handle markdown files from gatsby-source-git
     // create fields.slug from git data, because there are no frontmatter data
     if (parentNode.gitRemote___NODE) {
+      title = parentNode.name
+
       if (parentNode.relativeDirectory == '') {
         slug = `${parentNode.sourceInstanceName}/${parentNode.name}`
       } else {
         slug = `${parentNode.sourceInstanceName}/${parentNode.relativeDirectory}/${parentNode.name}`
       }
 
-      date = '-'
-      title = parentNode.name
+      if (parentNode.modifiedTime) {
+        date = parentNode.modifiedTime.substring(0, 10)
+      } else {
+        date = '-'
+      }
     }
     // handle markdown files from gatsby-source-filesystem
     // create fields.slug from frontmatter, to unify metadata like slug
@@ -79,7 +84,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     const path = node.fields.slug
     createPage({
       path,
-      component: mainTemplate,
+      component: docsTemplate,
       context: {
         // Data passed to context is available
         // in page queries as GraphQL variables.
