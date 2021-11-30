@@ -1,20 +1,24 @@
 {
 	"folders": [
     {
-      "name": "gatsby-keycapsss-faq",
-      "path": "../gatsby-keycapsss-faq"
-    },
-    {
-      "path": "../keycapsss-faq-site"
+      "name": "keycapsss-help-site",
+      "path": "../keycapsss-help-site"
     }
   ],
   "settings": {
     "cSpell.words": [
+      "buildguide",
       "frontmatter",
       "gatsbyjs",
+      "headlessui",
+      "heroicons",
       "semibold",
-      "tailwind"
-    ]
+      "tailwind",
+      "Weblink"
+    ],
+    "emmet.includeLanguages": {
+      "javascript": "javascriptreact"
+    }
   },
   // Set the default
   "editor.formatOnSave": false,
