@@ -4,28 +4,6 @@
 [![Discord](https://img.shields.io/discord/548530462419582996?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/frjFXZB "Redirect to Keycapsss Discord")
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-lightgrey.svg?style=flat-square)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
-<!-- TOC depthfrom:2 depthto:2 -->
-
-- [BOM](#bom)
-- [Introduction](#introduction)
-- [Attach the diodes](#attach-the-diodes)
-- [Solder the LED's for underglow optionally](#solder-the-leds-for-underglow-optionally)
-- [Solder the LED's for per switch RGB optionally](#solder-the-leds-for-per-switch-rgb-optionally)
-- [Soldering the TRRS jack and reset switch](#soldering-the-trrs-jack-and-reset-switch)
-- [Preparations for the OLED display](#preparations-for-the-oled-display)
-- [Install Pro Micro with sockets](#install-pro-micro-with-sockets)
-- [Solder the rotary encoder optionally](#solder-the-rotary-encoder-optionally)
-- [Solder the sockets](#solder-the-sockets)
-- [Install the Pimoroni Trackball optionally](#install-the-pimoroni-trackball-optionally)
-- [Case assembly](#case-assembly)
-- [Flash keymap on Pro Micro](#flash-keymap-on-pro-micro)
-- [Default keymap](#default-keymap)
-- [Operation check](#operation-check)
-- [When in trouble](#when-in-trouble)
-- [Customize the default keymap](#customize-the-default-keymap)
-- [Use "Per Key" LED's without underglow LED's](#use-per-key-leds-without-underglow-leds)
-
-<!-- /TOC -->
 
 You can find the build guide for Rev1 [here](https://github.com/Keycapsss/Lily58L-Build-Guide/blob/rev1/buildguide_en.md).
 
