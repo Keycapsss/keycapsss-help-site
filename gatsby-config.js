@@ -104,6 +104,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `reviung41`, // used for the slug
+        remote: `https://github.com/Keycapsss/reviung41-build-guide.git`,
+        branch: `master`,
+        // patterns: [`**/*`, `!LICENSE`],
+        patterns: [`buildguide_en.md`, `img/*`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
