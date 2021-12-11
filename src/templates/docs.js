@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import Toc from '../components/toc'
 import EditButton from '../components/buttonEdit'
+import Comments from '../components/comments'
 
 const Docs = ({ data }) => {
   const { markdownRemark } = data // data.markdownRemark holds your post data
@@ -41,6 +42,7 @@ const Docs = ({ data }) => {
             relativePath={markdownRemark.parent.relativePath}
           />
         )}
+        <Comments id={markdownRemark.fields.slug} />
       </main>
       <Toc headings={markdownRemark.headings} />
     </Layout>

@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Seo from '../components/seo'
 import PostLink from '../components/post-link'
 import Iframe from '../components/iframe'
+import Comments from '../components/comments'
 
 const IndexPage = ({
   data: {
@@ -24,6 +25,7 @@ const IndexPage = ({
           width="100%"
           height="600px"
         />
+        <Comments id="home" />
         {/* {Pages} */}
       </main>
     </Layout>
