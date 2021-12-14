@@ -9,7 +9,7 @@ const insertScript = (id, parentElement) => {
   script.id = id
   script.innerHTML = `
     var remark_config = {
-    host: 'https://comments.kycs.store',
+    host: 'https://comments.keycapsss.com',
     site_id: 'keycapsss.com',
     //url: 'PAGE_URL', // optional param; if it isn't defined
                      // 'window.location.origin + window.location.pathname' will be used
@@ -38,7 +38,7 @@ const insertScript = (id, parentElement) => {
                                     // in interface when enable it from backend side
                                     // if you set this param in 'false' you will get notifications email notifications as admin
                                     // but your users won't have interface for subscription
-    simple_view: true, // optional param; overrides the parameter from the backend
+    //simple_view: true, // optional param; overrides the parameter from the backend
                         // minimized UI with basic info only
   };
   !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
@@ -80,7 +80,7 @@ const Comments = ({ id }) => {
 }
 
 Comments.prototype = {
-  id: PropTypes.string.isRequired,
+  id: PropTypes.string,
 }
 
 export default Comments
