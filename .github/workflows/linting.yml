@@ -1,0 +1,28 @@
+name: Linting
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  markdown-link-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@master
+    - uses: gaurav-nelson/github-action-markdown-link-check@v1
+      with:
+        use-quiet-mode: 'yes'
+  markdownlint:
+    name: "Markdown linting"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Lint all markdown files
+        uses: docker://avtodev/markdown-lint:v1
+        with:
+          args: "**/*.md"
+          ignore: "**/node_modules/**"
