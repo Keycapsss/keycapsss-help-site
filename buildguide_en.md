@@ -33,6 +33,19 @@
 | ------------------------- | --- | ------------------------- |
 | Pimoroni Trackball module | 1   | support on the right half |
 
+## Initial test
+
+All PCB's are tested and the QMK firmware with the default keymap is already flashed on the master side.
+
+I recommend to test each switch position for functionality.
+
+Connect both half's with a USB-C to USB-C cable and connect the master side (left) with a USB-C cable to your computer.
+
+Open [QMK Configurator page](https://config.qmk.fm/#/test) and bridge each switch solder point pair with a tweezers. It should trigger a key press. If not please contact me.
+
+![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-9.jpg)
+![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-10.jpg)
+
 ## Assembly
 
 Attach the Choc V1 switches (36x) to the top plates and pay attention to the switch orientation. The lower row has a different orientation.
@@ -73,5 +86,26 @@ If everything works as expected, you can attach the self-adhesive foam to the un
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-6.jpg)
 
 The complete assembled 3W6 Split Keyboard should have 4 layers.
+The self-adhesive protection foil was not removed for demonstration purpose.
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-7.jpg)
+
+## Firmware
+
+The [QMK firmware](https://qmk.fm/) with the [default keymap]([https://link](https://github.com/qmk/qmk_firmware/blob/master/keyboards/3w6/keymaps/default/keymap.c)) is already flashed on board.
+
+If you are not familiar with keymaps and the use of the QMK tool, please refer to the [QMK "Getting Started" guide](https://docs.qmk.fm/#/newbs).
+
+With the command below, you compile the default keymap for the 3w6 (after setting up your build environment):
+
+```bash
+qmk compile -kb 3w6/rev2 -km default
+```
+
+To enter the bootloader mode, connect the board (master/left half) to the PC and push the reset button.
+
+With the [QMK Tool Box](https://github.com/qmk/qmk_toolbox) you can flash the new compiled firmware (.hex file) to the board, after you entered the bootloader mode.
+
+## Schematic
+
+[![3W6 schematic](img/3w6-schematic.png)](img/3w6-schematic.png)
