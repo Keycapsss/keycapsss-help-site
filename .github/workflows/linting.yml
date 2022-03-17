@@ -8,6 +8,7 @@ on:
 
 jobs:
   markdown-link-check:
+    name: Markdown link check
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@master
@@ -15,7 +16,7 @@ jobs:
       with:
         use-quiet-mode: 'yes'
   markdownlint:
-    name: "Markdown linting"
+    name: Markdown linting
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,5 +25,6 @@ jobs:
       - name: Lint all markdown files
         uses: docker://avtodev/markdown-lint:v1
         with:
-          args: "**/*.md"
-          ignore: "**/node_modules/**"
+          config: '.github/workflows/markdown-lint-config.json'
+          args: '**/*.md'
+          ignore: '**/node_modules/**'
