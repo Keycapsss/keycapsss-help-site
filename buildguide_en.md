@@ -92,7 +92,7 @@ The self-adhesive protection foil was not removed for demonstration purpose.
 
 ## Firmware
 
-The [QMK firmware](https://qmk.fm/) with the [default keymap]([https://link](https://github.com/qmk/qmk_firmware/blob/master/keyboards/3w6/keymaps/default/keymap.c)) is already flashed on board.
+The [QMK firmware](https://qmk.fm/) with the [default keymap](https://github.com/qmk/qmk_firmware/blob/master/keyboards/3w6/keymaps/default/keymap.c) is already flashed on board.
 
 If you are not familiar with keymaps and the use of the QMK tool, please refer to the [QMK "Getting Started" guide](https://docs.qmk.fm/#/newbs).
 
@@ -108,4 +108,4 @@ With the [QMK Tool Box](https://github.com/qmk/qmk_toolbox) you can flash the ne
 
 ## Schematic
 
-[![3W6 schematic](img/3w6-schematic.png)](img/3w6-schematic.png)
+[![3W6 schematic](img/3w6-schematic.png)](https://github.com/Keycapsss/3w6/raw/main/img/3w6-schematic.png)
