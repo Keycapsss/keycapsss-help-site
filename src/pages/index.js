@@ -25,7 +25,7 @@ const IndexPage = ({
           width="100%"
           height="600px"
         />
-        <Comments id="home" />
+        <Comments commentsId="home" />
         {/* {Pages} */}
       </main>
     </Layout>

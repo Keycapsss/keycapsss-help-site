@@ -42,7 +42,7 @@ const Docs = ({ data }) => {
             relativePath={markdownRemark.parent.relativePath}
           />
         )}
-        <Comments id={markdownRemark.fields.slug} />
+        <Comments commentsId={markdownRemark.fields.slug} />
       </main>
       <Toc headings={markdownRemark.headings} />
     </Layout>

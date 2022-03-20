@@ -7,11 +7,27 @@ const insertScript = (id, parentElement) => {
   script.type = 'text/javascript'
   script.async = true
   script.id = id
+
+  /* For Gatsby it's important to manually provide the URL
+  and make sure it does not contain a trailing slash ("/").
+  Because otherwise the comments for paths with/without
+  the trailing slash are stored separately in the BoltDB database.
+  When following a Gatsby Link a page is loaded without the trailing slash,
+  but when refreshing the page (F5) it is loaded with the trailing slash.
+  So essentially every URL can become duplicated in the DB and you may not see
+  your comments from the inverse URL at your present URL.
+  Making sure url is provided without the trailing slash
+  in the remark42 config solves this. */
+  let url = window.location.origin + window.location.pathname
+  if (url.endsWith('/')) {
+    url = url.slice(0, -1)
+  }
+
   script.innerHTML = `
     var remark_config = {
     host: 'https://comments.keycapsss.com',
     site_id: 'keycapsss.com',
-    //url: 'PAGE_URL', // optional param; if it isn't defined
+    url: '${url}',   // optional param; if it isn't defined
                      // 'window.location.origin + window.location.pathname' will be used
                      //
                      // Note that if you use query parameters as significant part of URL
@@ -34,12 +50,13 @@ const insertScript = (id, parentElement) => {
     theme: 'light', // optional param; if it isn't defined default value ('light') will be used
     // page_title: 'Moving to Remark42', // optional param; if it isn't defined 'document.title' will be used
     locale: 'en', // set up locale and language, if it isn't defined default value ('en') will be used
-    show_email_subscription: false, // optional param; by default it is 'true' and you can see email subscription feature
+    show_email_subscription: true, // optional param; by default it is 'true' and you can see email subscription feature
                                     // in interface when enable it from backend side
                                     // if you set this param in 'false' you will get notifications email notifications as admin
                                     // but your users won't have interface for subscription
     //simple_view: true, // optional param; overrides the parameter from the backend
                         // minimized UI with basic info only
+    components: ['embed'],
   };
   !function(e,n){for(var o=0;o<e.length;o++){var r=n.createElement("script"),c=".js",d=n.head||n.body;"noModule"in r?(r.type="module",c=".mjs"):r.async=!0,r.defer=!0,r.src=remark_config.host+"/web/"+e[o]+c,d.appendChild(r)}}(remark_config.components||["embed"],document);
   `
@@ -55,7 +72,7 @@ const removeScript = (id, parentElement) => {
   }
 }
 
-const Comments = ({ id }) => {
+const Comments = ({ commentsId }) => {
   useEffect(() => {
     // If there's no window there's nothing to do for us
     if (!window) {
@@ -66,10 +83,16 @@ const Comments = ({ id }) => {
     if (document.getElementById('remark42')) {
       insertScript('comments-script', document.body)
     }
+    // Reload the Remark42 script
+    const remark42 = window.REMARK42
+    if (remark42) {
+      remark42.destroy()
+      remark42.createInstance(window.remark_config)
+    }
 
     // Cleanup when the component unmounts
     return () => removeScript('comments-script', document.body)
-  }, [id])
+  }, [commentsId])
 
   return (
     <>
@@ -79,8 +102,8 @@ const Comments = ({ id }) => {
   )
 }
 
-Comments.prototype = {
-  id: PropTypes.string,
+Comments.propTypes = {
+  commentsId: PropTypes.string,
 }
 
 export default Comments
