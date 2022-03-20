@@ -108,4 +108,4 @@ With the [QMK Tool Box](https://github.com/qmk/qmk_toolbox) you can flash the ne
 
 ## Schematic
 
-[![3W6 schematic](img/3w6-schematic.png)](https://github.com/Keycapsss/3w6/raw/main/img/3w6-schematic.png)
+[![3W6 schematic](img/3w6-schematic.png)](https://github.com/Keycapsss/3w6/raw/master/img/3w6-schematic.png)
