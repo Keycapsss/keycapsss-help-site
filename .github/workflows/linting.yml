@@ -25,6 +25,6 @@ jobs:
       - name: Lint all markdown files
         uses: docker://avtodev/markdown-lint:v1
         with:
-          config: '.github/workflows/markdown-lint-config.json'
+          config: '.github/workflows/config/markdown-lint-config.yml'
           args: '**/*.md'
           ignore: '**/node_modules/**'
