@@ -114,6 +114,16 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `3w6`, // used for the slug
+        remote: `https://github.com/Keycapsss/3w6.git`,
+        branch: `master`,
+        // patterns: [`**/*`, `!LICENSE`],
+        patterns: [`buildguide_en.md`, `img/*`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
