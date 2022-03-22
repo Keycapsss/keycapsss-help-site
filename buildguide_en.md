@@ -46,6 +46,16 @@ Open [QMK Configurator page](https://config.qmk.fm/#/test) and bridge each switc
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-9.jpg)
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-10.jpg)
 
+## Visual enhancement (optional)
+
+This step is not nessesary, but will improve visually appealing of your 3W6 split keyboard.
+
+Due to the manufacturing process of the PCB's, there are some rough edges. Use a small file to remove these marks from the mouse bites.
+
+You could also paint the edges black with a black Sharpie/Edding.
+
+![3W6 paint PCB edges black and remove mouse bites](img/3w6-split-keyboard-kit-black-pcb-build-guide-11.jpg)
+
 ## Assembly
 
 Attach the Choc V1 switches (36x) to the top plates and pay attention to the switch orientation. The lower row has a different orientation.
