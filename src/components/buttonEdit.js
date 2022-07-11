@@ -6,12 +6,12 @@ import { faPencilAlt } from '@fortawesome/free-solid-svg-icons'
 
 const EditButton = ({ webLink, branch, relativePath }) => {
   return (
-    <div className="my-10 text-right text-gray-500">
+    <div className="my-10 text-right">
       <a
-        className="hover:text-gray-900"
+        className="text-slate-700 hover:text-slate-500 dark:text-slate-300"
         href={`${webLink}/edit/${branch}/${relativePath}`}>
         <FontAwesomeIcon
-          className="cursor-pointer hover:text-gray-400"
+          className="cursor-pointer hover:text-slate-500"
           icon={faPencilAlt}
         />{' '}
         Edit this page

@@ -10,12 +10,8 @@ module.exports = {
       typography: {
         DEFAULT: {
           css: {
-            color: '#000',
             a: {
               color: '#32e34c',
-              '&:hover': {
-                color: '#0a3010',
-              },
             },
           },
         },

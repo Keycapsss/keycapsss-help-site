@@ -27,22 +27,24 @@ const Docs = ({ data }) => {
         description={markdownRemark.excerpt}
         pathname={markdownRemark.fields.slug}
       />
-      <main
-        id="content-wrapper"
-        className="flex-1 flex-grow min-w-0 mb-6 mr-0 lg:mr-12 xl:mr-18">
+      <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none">
+        {/* Start main area*/}
         {/* <div>{JSON.stringify(markdownRemark.parent)}</div> */}
-        <article
-          className="prose lg:prose-lg xl:prose-xl"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        {markdownRemark.parent.gitRemote && (
-          <EditButton
-            webLink={markdownRemark.parent.gitRemote.webLink}
-            branch={markdownRemark.parent.gitRemote.ref}
-            relativePath={markdownRemark.parent.relativePath}
+        <div className="absolute inset-0 px-4 py-6 sm:px-6 lg:px-8">
+          <article
+            className="prose prose-slate prose-img:rounded-md dark:prose-invert lg:prose-lg "
+            dangerouslySetInnerHTML={{ __html: html }}
           />
-        )}
-        <Comments commentsId={markdownRemark.fields.slug} />
+          {markdownRemark.parent.gitRemote && (
+            <EditButton
+              webLink={markdownRemark.parent.gitRemote.webLink}
+              branch={markdownRemark.parent.gitRemote.ref}
+              relativePath={markdownRemark.parent.relativePath}
+            />
+          )}
+          <Comments commentsId={markdownRemark.fields.slug} />
+        </div>
+        {/* End main area */}
       </main>
       <Toc headings={markdownRemark.headings} />
     </Layout>

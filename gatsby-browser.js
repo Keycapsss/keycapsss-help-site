@@ -5,5 +5,8 @@
  */
 import './src/styles/global.css'
 import '@fontsource/nunito'
-import './src/styles/prism-rose-pine-moon.css'
+
 import 'prismjs/plugins/command-line/prism-command-line.css'
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import 'prismjs/plugins/line-highlight/prism-line-highlight.css'
+import './src/styles/prism-rose-pine-moon.css'

@@ -19,28 +19,39 @@ function getIds(items) {
 
 function RenderTocItems({ headings, activeId }) {
   return (
-    <ul className="font-medium text-gray-500 ">
+    <nav className="space-y-1" aria-label="Sidebar">
       {headings.map((heading, i) => {
         if (heading.depth <= maxHeadingsDepth) {
           return (
-            <li
+            <a
               key={i}
-              className={`px-2
-              ${activeId === heading.id ? 'bg-gray-100 border-green-400' : ''}
+              href={`#${heading.id}`}
+              className={`flex items-center rounded-md px-3 py-2 text-sm font-medium
+                ${
+                  activeId === heading.id
+                    ? 'bg-slate-200 text-slate-900 dark:bg-slate-700 dark:text-slate-300'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 hover:dark:bg-slate-600 hover:dark:text-slate-200'
+                }
               }`}>
-              <a
-                href={`#${heading.id}`}
-                className={`
-              ${activeId === heading.id ? 'text-gray-900' : 'text-gray-500'}
-              ${heading.depth >= 3 ? 'ml-4' : ''}
-              } block transform transition-colors duration-200 py-2 hover:text-gray-900`}>
-                {heading.value}
-              </a>
-            </li>
+              <span className="truncate">{heading.value}</span>
+            </a>
           )
         }
       })}
-    </ul>
+      {/* comment section */}
+      <a
+        key="comments"
+        href="#comments"
+        className={`flex items-center rounded-md px-3 py-2 text-sm font-medium
+                ${
+                  activeId === 'comments'
+                    ? 'bg-slate-200 text-slate-900 dark:bg-slate-700 dark:text-slate-300'
+                    : 'text-slate-600 hover:bg-slate-50 hover:text-slate-900 dark:text-slate-300 hover:dark:bg-slate-600 hover:dark:text-slate-200'
+                }
+              }`}>
+        <span className="truncate">Comments</span>
+      </a>
+    </nav>
   )
 }
 
@@ -49,16 +60,14 @@ function Toc({ headings }) {
   const activeId = useActiveHash(idList, `-10% 0% -50% 0%`)
 
   return (
-    <div id="toc" className="hidden w-48 mr-8 lg:block xl:w-60">
-      <div className="sticky top-0 bottom-0 md:top-20">
-        <div className="max-h-screen overflow-y-auto">
-          <div className="pb-32 overflow-y-auto">
-            <h5 className="mb-3 text-sm font-bold uppercase">On this page</h5>
-            <RenderTocItems headings={headings} activeId={activeId} />
-          </div>
-        </div>
+    <aside className="relative flex-shrink-0 hidden overflow-y-auto xl:flex xl:flex-col w-96">
+      {/* Start secondary column (hidden on smaller screens) */}
+      <div className="absolute inset-0 px-4 py-6 sm:px-6 lg:px-8">
+        <h5 className="mb-3 text-sm font-bold uppercase dark:text-slate-300">On this page</h5>
+        <RenderTocItems headings={headings} activeId={activeId} />
       </div>
-    </div>
+      {/* End secondary column */}
+    </aside>
   )
 }
 

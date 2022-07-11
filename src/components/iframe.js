@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 
 const Iframe = ({ src, width, height }) => (
-  <iframe src={src} width={width} height={height} scrolling="no"></iframe>
+  <iframe src={src} width={width} height={height} scrolling="no" className="rounded-md"></iframe>
 )
 
 Iframe.propTypes = {

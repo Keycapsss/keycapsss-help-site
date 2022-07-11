@@ -19,14 +19,18 @@ const IndexPage = ({
   return (
     <Layout>
       <Seo title="Build-Guides, FAQ, Product Restock" />
-      <main className="w-full prose max-w-none md:prose-lg xl:prose-xl">
-        <Iframe
-          src="https://trello.com/b/99fbRrEe.html"
-          width="100%"
-          height="600px"
-        />
-        <Comments commentsId="home" />
-        {/* {Pages} */}
+      <main className="relative z-0 flex-1 overflow-y-auto focus:outline-none">
+        {/* Start main area*/}
+        <div className="absolute inset-0 px-4 py-6 sm:px-6 lg:px-8">
+          <Iframe
+            src="https://trello.com/b/99fbRrEe.html"
+            width="100%"
+            height="600px"
+          />
+          <br/>
+          <Comments commentsId="home" />
+          {/* {Pages} */}
+        </div>
       </main>
     </Layout>
   )

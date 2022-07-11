@@ -63,11 +63,8 @@ module.exports = {
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
-              prompt: {
-                user: 'ben',
-                host: 'localhost',
-                global: true,
-              },
+              classPrefix: 'not-prose language-',
+              inlineCodeMarker: '>',
             },
           },
         ],

@@ -3,8 +3,25 @@
 @tailwind utilities;
 
 @layer base {
+
+
+  /*
+  * Purpose:
+  * Assign height: "100%" to
+  * html, body, #___gatsby &
+  * div with role="group"
+  */
+
+  html, body, #___gatsby, #gatsby-focus-wrapper {
+      height: 100%;
+  }
+
+  body {
+      margin: 0px;
+  }
+
   main {
-    min-height: calc(100vh - 200px);
+    min-height: calc(100vh - 80px);
   }
 
   .gatsby-highlight-code-line {
