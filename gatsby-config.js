@@ -121,6 +121,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `cirque-trackpad`, // used for the slug
+        remote: `https://github.com/Keycapsss/cirque-trackpad.git`,
+        branch: `master`,
+        patterns: [`**/*`, `!LICENSE`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
