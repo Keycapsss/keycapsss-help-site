@@ -11,10 +11,19 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     if (parentNode.gitRemote___NODE) {
       title = parentNode.name
 
-      if (parentNode.relativeDirectory == '') {
-        slug = `${parentNode.sourceInstanceName}/${parentNode.name}`
+      // if markdown file is named README slug has no filename similar like index.js
+      if (parentNode.name == 'README') {
+        if (parentNode.relativeDirectory == '') {
+          slug = `${parentNode.sourceInstanceName}/`
+        } else {
+          slug = `${parentNode.sourceInstanceName}/${parentNode.relativeDirectory}/`
+        }
       } else {
-        slug = `${parentNode.sourceInstanceName}/${parentNode.relativeDirectory}/${parentNode.name}`
+        if (parentNode.relativeDirectory == '') {
+          slug = `${parentNode.sourceInstanceName}/${parentNode.name}`
+        } else {
+          slug = `${parentNode.sourceInstanceName}/${parentNode.relativeDirectory}/${parentNode.name}`
+        }
       }
 
       if (parentNode.modifiedTime) {
