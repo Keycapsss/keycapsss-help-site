@@ -11,7 +11,6 @@ import Footer from './footer'
 import {
   FolderIcon,
   HomeIcon,
-  MenuIcon,
   ShoppingCartIcon,
   XIcon,
 } from '@heroicons/react/outline'
@@ -24,6 +23,7 @@ const navigation = [
   { name: 'Kimiko', href: '/kimiko/buildguide_en', icon: FolderIcon },
   { name: 'Lily58L', href: '/lily58l/buildguide_en', icon: FolderIcon },
   { name: 'Plaid-Pad', href: '/plaid-pad/buildguide_en', icon: FolderIcon },
+  { name: 'Puchi-BLE', href: '/puchi-ble', icon: FolderIcon },
   { name: 'Reviung41', href: '/reviung41/buildguide_en', icon: FolderIcon },
 ]
 

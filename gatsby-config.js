@@ -130,6 +130,15 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `puchi-ble`, // used for the slug
+        remote: `https://github.com/Keycapsss/puchi-ble.git`,
+        branch: `main`,
+        patterns: [`**/*`, `!LICENSE`],
+      },
+    },
+    {
       resolve: 'gatsby-plugin-react-svg',
       options: {
         rule: {
