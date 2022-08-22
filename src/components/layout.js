@@ -27,17 +27,6 @@ const navigation = [
   { name: 'Reviung41', href: '/reviung41/buildguide_en', icon: FolderIcon },
 ]
 
-// https://medium.com/@chrisfitkin/how-to-smooth-scroll-links-in-gatsby-3dc445299558
-if (typeof window !== 'undefined') {
-  // eslint-disable-next-line global-require
-  require('smooth-scroll')('a[href*="#"]', {
-    speed: 800,
-    speedAsDuration: true,
-    easing: 'easeInOutCubic',
-    offset: 80,
-  })
-}
-
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
