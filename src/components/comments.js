@@ -23,6 +23,17 @@ const insertScript = (id, parentElement) => {
     url = url.slice(0, -1)
   }
 
+  // check system color theme settings to
+  // set light or dark theme for remark42
+  let prefersColorScheme = 'light'
+  if (
+    window.matchMedia &&
+    window.matchMedia('(prefers-color-scheme: dark)').matches
+  ) {
+    console.log('dark')
+    prefersColorScheme = 'dark'
+  }
+
   script.innerHTML = `
     var remark_config = {
     host: 'https://comments.keycapsss.com',
@@ -47,7 +58,7 @@ const insertScript = (id, parentElement) => {
                      // If you deal with query parameters make sure you pass only significant part of it
                      // in well defined order
     max_shown_comments: 10, // optional param; if it isn't defined default value (15) will be used
-    theme: 'light', // optional param; if it isn't defined default value ('light') will be used
+    theme: '${prefersColorScheme}', // optional param; if it isn't defined default value ('light') will be used
     // page_title: 'Moving to Remark42', // optional param; if it isn't defined 'document.title' will be used
     locale: 'en', // set up locale and language, if it isn't defined default value ('en') will be used
     show_email_subscription: true, // optional param; by default it is 'true' and you can see email subscription feature
