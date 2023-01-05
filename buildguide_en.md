@@ -294,8 +294,6 @@ If something doesn't work:
 
 ## When in trouble
 
-[![Lily58L schematic](img/Lily58L-schematic.png)](img/Lily58L-schematic.png?raw=true)
-
 ### Q. One or more rows/columns of key switches do not respond
 
 A. The Pro Micro board may not be soldered and attached firmly. Check again, and re-solder and reinstall if necessary.  
@@ -363,3 +361,7 @@ If you don't want to use the underglow function with the WS2812 LED's, then brid
 ![Left half - bridge underglow](img/lily58l-bridge-underglow-1.png)
 
 ![Right half - bridge underglow](img/lily58l-bridge-underglow-2.png)
+
+## Schematic
+
+[![Lily58L schematic](img/Lily58L-schematic.png)](img/Lily58L-schematic.png)
