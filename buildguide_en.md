@@ -1,4 +1,4 @@
-# 3w6 Build Guide
+# 3w6-2040 Build Guide
 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://github.com/firstcontributions/first-contributions)
 [![Discord](https://img.shields.io/discord/548530462419582996?style=flat-square&logo=discord&logoColor=white)](https://discord.gg/frjFXZB "Redirect to Keycapsss Discord")
@@ -31,26 +31,29 @@
 
 | Part name                 | Qty | Remarks                   |
 | ------------------------- | --- | ------------------------- |
-| Pimoroni Trackball module | 1   | support on the right half |
+| Pimoroni Trackball module | 1   | Support on both half's simultaneously, or only one side  |
 
 ## Initial test
 
-All PCB's are tested and the QMK firmware with the default keymap is already flashed on the master side.
+All PCB's are tested and the VIAL QMK firmware is already flashed on both sides.
 
-I recommend to test each switch position for functionality.
+I recommend to test each switch position for functionality, before you solder the switches.
 
-Connect both half's with a USB-C to USB-C cable and connect the master side (left) with a USB-C cable to your computer.
+Connect both half's with a USB-C to USB-C cable and connect one side with a USB-C cable to your computer.
+
+> The pre flashed firmware use ["Handedness by EEPROM"](https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-eeprom), so it does not matter which half is master (connected to the computer).  
+> The layout can be mirrored if "Handedness by EEPROM" is not used.
 
 Open [QMK Configurator page](https://config.qmk.fm/#/test) and bridge each switch solder point pair with a tweezers. It should trigger a key press. If not please contact me.
 
-![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-9.jpg)
+![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-12.jpg)
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-10.jpg)
 
 ## Visual enhancement (optional)
 
-This step is not nessesary, but will improve visually appealing of your 3W6 split keyboard.
+This step is not necessary, but will improve visually appealing of your 3W6 split keyboard.
 
-Due to the manufacturing process of the PCB's, there are some rough edges. Use a small file to remove these marks from the mouse bites.
+Due to the manufacturing process of the PCB's, there are some rough edges. Use a small file to remove these marks (mouse bites).
 
 You could also paint the edges black with a black Sharpie/Edding.
 
@@ -60,19 +63,16 @@ You could also paint the edges black with a black Sharpie/Edding.
 
 Attach the Choc V1 switches (36x) to the top plates and pay attention to the switch orientation. The lower row has a different orientation.
 
-![3w6 top plate with switches](img/3w6-split-keyboard-kit-black-pcb-build-guide-2.jpg)
-
 Check carefully if all switch pins are staight.
 
 ![3w6 top plate with switches from bottom view](img/3w6-split-keyboard-kit-black-pcb-build-guide-1.jpg)
 
-Put the 3D printed spacer on top of the PCB's.  
-The SMD components must face up. Pay attention that left and right spacer are different.
+Put the 3D printed spacer on the back of the top plate.  
 
 ![3w6 3d printed spacer plates on top of the PCB's](img/3w6-split-keyboard-kit-black-pcb-build-guide-3.jpg)
 
-Put the assembled top plates with the switches on the PCB's with the spacer.  
-Do not press to hard. Turn the PCB's and check from the bottom view, if all switch pins are align with the holes in the PCB.
+Place the pcb (SMD components must face down) on the top plate with the switches spacer.  
+Do not press to hard. Check if all switch pins are align with the holes in the PCB.
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-4.jpg)
 
@@ -83,39 +83,43 @@ If you have problems to close the gap, probably a switch pin is bent.
 
 While you press the PCB down, solder all switch pin's (green marked)
 
-![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-9.jpg)
+![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-4.jpg)
 
-Connect both half's with a USB-C to USB-C cable and connect the master side (left) with a USB-C cable to your computer.
+Connect both half's with a USB-C to USB-C cable and connect one half with a USB-C cable to your computer.
 
 Open [QMK Configurator page](https://config.qmk.fm/#/test) and test if all switches trigger a key press. If not check the corresponding solder point for the switch.
 
-![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-8.jpg)
-
 If everything works as expected, you can attach the self-adhesive foam to the underside.
 
-![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-6.jpg)
-
-The complete assembled 3W6 Split Keyboard should have 4 layers.
-The self-adhesive protection foil was not removed for demonstration purpose.
+The complete assembled 3W6 Split Keyboard should have 4 layers  
+*The self-adhesive protection foil was not removed for demonstration purpose.*
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-7.jpg)
 
 ## Firmware
 
-The [QMK firmware](https://qmk.fm/) with the [default keymap](https://github.com/qmk/qmk_firmware/blob/master/keyboards/3w6/keymaps/default/keymap.c) is already flashed on board.
+The [VIAL QMK firmware](https://get.vial.today) with the [vial keymap](https://github.com/vial-kb/vial-qmk/tree/vial/keyboards/keycapsss/3w6_2040/keymaps/vial) is already flashed on both half's.
 
-If you are not familiar with keymaps and the use of the QMK tool, please refer to the [QMK "Getting Started" guide](https://docs.qmk.fm/#/newbs).
+To customize the layout of your 3W6, [download](https://get.vial.today/download/) the VIAL GUI, or use the [web version](https://vial.rocks/).
+The keyboard should be detected right out of the box.
 
-With the command below, you compile the default keymap for the 3w6 (after setting up your build environment):
+### Customize the firmware (optional)
+
+With the command below, you compile the vial keymap for the 3w6 [(after setting up your build environment)](https://docs.qmk.fm/#/newbs):
 
 ```bash
-qmk compile -kb 3w6/rev2 -km default
+make keycapsss/3w6_2040:vial:uf2-split-right
 ```
 
-To enter the bootloader mode, connect the board (master/left half) to the PC and push the reset button.
+You will find a `keycapsss_3w6_2040_vial.uf2` in the qmk folder. Rename it to `keycapsss_3w6_2040_vial_right.uf2` and do the same for the left firmware file (replace `right` with `left`).
 
-With the [QMK Tool Box](https://github.com/qmk/qmk_toolbox) you can flash the new compiled firmware (.hex file) to the board, after you entered the bootloader mode.
+### Bootloader (flash firmware)
+
+1. Push and hold the BOOTSEL button and connect the half to the computer.
+2. A mass storage drive (RPI-RP2) should appear. You can release the BOOTSEL button.
+3. Drag and drop the UF2 file onto the RPI-RP2 volume. The 3W6 will reboot.
 
 ## Schematic
 
-[![3W6 schematic](img/3w6-schematic.png)](https://github.com/Keycapsss/3w6/raw/master/img/3w6-schematic.png)
+[![3W6 schematic](img/3w6-rp2040-schematic-1.png)](https://github.com/Keycapsss/3w6/raw/master/img/3w6-rp2040-schematic-1.png)
+*Schematic for the RP2040 part (right side is equal)*
