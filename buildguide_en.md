@@ -119,6 +119,37 @@ You will find a `keycapsss_3w6_2040_vial.uf2` in the qmk folder. Rename it to `k
 2. A mass storage drive (RPI-RP2) should appear. You can release the BOOTSEL button.
 3. Drag and drop the UF2 file onto the RPI-RP2 volume. The 3W6 will reboot.
 
+## Pimoroni Trackball
+
+This 3W6 keyboard supports a trackball module on both sides (left side only, right side only, or on both sides simultaneously).
+
+The trackball module is already activated in the default flashed firmware.
+
+The trackball is connected via I2C to the mcu.
+Since Rev1.1 the INT (interrupt pin) is connected to the GPIO24 pin.  
+Right now *(05.2023)* the QMK [driver for the Pimoroni Trackball module](https://docs.qmk.fm/#/feature_pointing_device?id=pimoroni-trackball) do not use the INT pin.
+
+### Trackball module assembly
+
+1. Solder the header pin to the module (plastic part at the bottom).  
+   Carefully remove the plastic from the header pins (marked red) with pliers.
+
+   ![alt](img/3w6-pimoroni-trackball-1.jpg)
+2. On the side you want to install the trackball module, break away the red marked part. There is a predetermined breaking point at the vertical red line.
+
+   ![alt](img/3w6-pimoroni-trackball-2.jpg)
+
+3. Place the module on the top side of the pcb. The module should sit on the pcb, without a gap (green arrow).  
+   The module should be align with the white tactile switch next to it. If not, it could be that the plastic cover of the trackball do not fit in the cutout in the top plate.  
+   Solder the header pins from the bottom.
+
+   ![alt](img/3w6-pimoroni-trackball-3.jpg)
+
+4. Cut the header pins as close as possible to the pcb and reflow the solder points again (looks better).
+
+   ![alt](img/3w6-pimoroni-trackball-4.jpg)
+   *Ignore the pixelated part, it's from a prototype.*
+
 ## Schematic
 
 [![3W6 schematic](img/3w6-rp2040-schematic-1.png)](https://github.com/Keycapsss/3w6/raw/master/img/3w6-rp2040-schematic-1.png)
