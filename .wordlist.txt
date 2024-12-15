@@ -8,3 +8,5 @@ bom
 bootloader
 config
 zmk
+Aliexpress
+lipo
