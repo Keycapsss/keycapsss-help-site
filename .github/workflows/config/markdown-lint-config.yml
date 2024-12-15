@@ -1,0 +1,6 @@
+# Example with all configurations https://github.com/avto-dev/markdown-lint/blob/master/lint/config/changelog.yml
+
+default: false # includes/excludes all rules by default
+
+# Line length <https://github.com/DavidAnson/markdownlint/blob/master/doc/Rules.md#md013>
+MD013: false
