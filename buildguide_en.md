@@ -8,11 +8,22 @@
 
 ### Parts included in the kit
 
-| Part name | Qty | Remarks |
-| :-------- | :-- | :------ |
-|           |     |         |
+| Part name                      | Qty | Remarks                                           |
+| :----------------------------- | :-- | :------------------------------------------------ |
+| Forager PCB (left, right side) | 2   | Fully assembled                                   |
+| Case                           | 2   | 3D printed with black PLA                         |
+| Tenting feet                   | 4   | 3D printed with black PLA                         |
+| Screws                         |     | Black countersunk M2x4 screws (with spare screws) |
+| Rubber feet                    |     |                                                   |
 
 ### Additionally required parts
+
+| Part name            | Qty | Remarks                           |
+| :------------------- | :-- | :-------------------------------- |
+| Choc V1 switches     | 34  |                                   |
+| Choc V1 keycaps      | 34  |                                   |
+| LiPo 1S 3.7V battery | 2   | Optional with a JST ACH connector |
+| Screwdriver          |     | PZ1                               |
 
 ## Battery
 
