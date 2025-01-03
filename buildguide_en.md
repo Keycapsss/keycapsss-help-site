@@ -34,8 +34,8 @@ The board has a JST ACH connector or if your battery does not have the right con
 [![401230 LiPo 1cell 3.7v battery](img/a17de550b718850611903ab1557a6545_MD5.jpg)](img/a17de550b718850611903ab1557a6545_MD5.jpg)
 
 ![Lipo battery soldered](img/lipo-battery-1.jpg)
-_Lipo battery without JST connector, with cables directly soldered to the PCB.  
-__Red = (+) , Black = (-)___
+*Lipo battery without JST connector, with cables directly soldered to the PCB.  
+**Red = (+) , Black = (-)***
 
 ### Where to buy
 
@@ -82,12 +82,12 @@ The Forager ships with the following default keymap:
 
 ### ZMK Studio
 
-With ZMK Studio you can change the keycamp without flashing a new firmware.  
+With ZMK Studio you can change the keymap without flashing a new firmware.  
 The pre flashed firmware has ZMK Studio enabled.
 
 1. Connect the centre half to your computer using a USB cable.
 2. Open the [ZMK Studio website](https://zmk.studio), or download the latest release of the [cross platform application](https://github.com/zmkfirmware/zmk-studio/releases).
-3. To unlock the keyboard, press the <kbd>studio_unlock</kbd> key _(first column, second row)_ in the `adj` layer.  
+3. To unlock the keyboard, press the <kbd>studio_unlock</kbd> key *(first column, second row)* in the `adj` layer.  
     To access the `adj` layer, hold the <kbd>sym</kbd> and the <kbd>num</kbd> key.
 4. Now you can change the keymap to suit your needs.
     Not all ZMK features are supported by ZMK Studio.  More information [here](https://zmk.dev/docs/features/studio#capabilities).
@@ -97,4 +97,3 @@ The pre flashed firmware has ZMK Studio enabled.
 ZMK will automatically start advertising to allow new hosts to connect. From your computer, go to the bluetooth preferences and add a device. You should see a device named "Forager" in the list. Click that item to connect. Once connected over bluetooth, you should be able to start typing.
 
 To use more than one host/device with you Forager, you'll need to use different profiles to manage the connection/communication with each device. To learn more, read up on ZMK's [bluetooth feature](https://zmk.dev/docs/features/bluetooth).
-
