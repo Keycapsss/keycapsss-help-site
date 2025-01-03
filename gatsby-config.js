@@ -60,6 +60,7 @@ module.exports = {
               removeAccents: true,
             },
           },
+          `gatsby-remark-copy-linked-files`,
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
@@ -134,6 +135,15 @@ module.exports = {
       options: {
         name: `puchi-ble`, // used for the slug
         remote: `https://github.com/Keycapsss/puchi-ble.git`,
+        branch: `main`,
+        patterns: [`**/*`, `!LICENSE`],
+      },
+    },
+    {
+      resolve: `gatsby-source-git`,
+      options: {
+        name: `forager`, // used for the slug
+        remote: `https://github.com/Keycapsss/forager-build-guide.git`,
         branch: `main`,
         patterns: [`**/*`, `!LICENSE`],
       },
