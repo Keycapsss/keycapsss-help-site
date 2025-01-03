@@ -2,7 +2,6 @@ keycap
 keycaps
 keycapsss
 keymap
-keymaps
 macos
 bom
 bootloader
@@ -10,3 +9,4 @@ config
 zmk
 Aliexpress
 lipo
+Configurator

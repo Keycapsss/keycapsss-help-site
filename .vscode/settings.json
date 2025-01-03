@@ -3,6 +3,9 @@
     "Aliexpress",
     "Keymap",
     "Lipo",
-    "streamlit"
-  ]
+    "streamlit",
+    "Configurator",
+    "keycaps",
+    
+  ],
 }
