@@ -33,7 +33,7 @@ The board has a JST ACH connector or if your battery does not have the right con
 
 [![401230 LiPo 1cell 3.7v battery](img/a17de550b718850611903ab1557a6545_MD5.jpg)](img/a17de550b718850611903ab1557a6545_MD5.jpg)
 
-![Lipo battery soldered](/img/lipo-battery-1.jpg)
+![Lipo battery soldered](img/lipo-battery-1.jpg)
 _Lipo battery without JST connector, with cables directly soldered to the PCB.  
 __Red = (+) , Black = (-)___
 
@@ -76,7 +76,7 @@ The [QMK Configurator](https://config.qmk.fm/#/test) pag gives you visual feedba
 
 The Forager ships with the following default keymap:
 
-![Forager default keymap](img/cff91313883aeac1728ef8d40a033e91_MD5.svg)
+![Forager default keymap](img/forager-default-keymap-1.svg)
 
 *Keymap image created with [keymap-drawer.streamlit.app](<https://github.com/caksoylar/keymap-drawer https://keymap-drawer.streamlit.app>)*
 
