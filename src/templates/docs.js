@@ -31,6 +31,13 @@ const Docs = ({ data }) => {
         {/* Start main area*/}
         {/* <div>{JSON.stringify(markdownRemark.parent)}</div> */}
         <div className="absolute inset-0 px-4 py-6 sm:px-6 lg:px-8">
+          {markdownRemark.parent.gitRemote && (
+            <EditButton
+              webLink={markdownRemark.parent.gitRemote.webLink}
+              branch={markdownRemark.parent.gitRemote.ref}
+              relativePath={markdownRemark.parent.relativePath}
+            />
+          )}
           <article
             className="prose prose-slate prose-img:rounded-md dark:prose-invert lg:prose-lg "
             dangerouslySetInnerHTML={{ __html: html }}
