@@ -20,6 +20,7 @@ const navigation = [
   { name: 'Shop', href: 'https://keycapsss.com', icon: ShoppingCartIcon },
   { name: '3W6', href: '/3w6/buildguide_en', icon: FolderIcon },
   { name: 'Cirque Trackpad', href: '/cirque-trackpad', icon: FolderIcon },
+  { name: 'Forager', href: '/forager/buildguide_en', icon: FolderIcon },
   { name: 'Kimiko', href: '/kimiko/buildguide_en', icon: FolderIcon },
   { name: 'Lily58L', href: '/lily58l/buildguide_en', icon: FolderIcon },
   { name: 'Plaid-Pad', href: '/plaid-pad/buildguide_en', icon: FolderIcon },

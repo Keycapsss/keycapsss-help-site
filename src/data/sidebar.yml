@@ -8,6 +8,8 @@
   items:
     - label: '3W6'
       link: '/3w6/buildguide_en'
+    - label: 'Forager'
+      link: '/forager/buildguide_en'
     - label: 'Kimiko'
       link: '/kimiko/buildguide_en'
     - label: 'Lily58L'
