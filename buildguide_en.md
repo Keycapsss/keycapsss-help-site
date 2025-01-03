@@ -22,7 +22,9 @@ The board has a JST ACH connector or if your battery does not have the right con
 
 [![401230 LiPo 1cell 3.7v battery](img/a17de550b718850611903ab1557a6545_MD5.jpg)](img/a17de550b718850611903ab1557a6545_MD5.jpg)
 
-- [ ] Add an image with cables solder to the PCB (polarity important)
+![Lipo battery soldered](/img/lipo-battery-1.jpg)
+_Lipo battery without JST connector, with cables directly soldered to the PCB.  
+__Red = (+) , Black = (-)___
 
 ### Where to buy
 
@@ -42,7 +44,7 @@ The set includes some spare screws.
 1. Check that you have all required parts
     - [ ] Image with all parts
 2. Attach or solder the battery cable to the PCB and secure the battery with the double-sided adhesive tape.
-3. Insert the PCB into the bottom of the case. Start with the USB connector and then push the overlying side down. Tighten the 5x screws. Ensure that the battery cable is not trapped between the case and the soldering nut.
+3. Insert the PCB into the bottom of the case. Start with the USB connector and then push the overlying side down. Tighten the 5x screws. Ensure that the battery cable is not trapped between the case and the soldering nut. ![Battery cable](/img/battery-cable-1.jpeg)
 4. Place the top plate on the on PCB.  
     Take a choc v1 switch and check that the 2 metal pins are straight.  
     [![Choc switch pin align](img/7fe8b8d50b93cdbc1e18bd6a916da055_MD5.jpg)](img/7fe8b8d50b93cdbc1e18bd6a916da055_MD5.jpg)
