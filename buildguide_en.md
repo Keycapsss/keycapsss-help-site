@@ -33,6 +33,10 @@
 | ------------------------- | --- | ------------------------- |
 | Pimoroni Trackball module | 1   | Support on both half's simultaneously, or only one side  |
 
+## CAD files
+
+- Top plate [dxf file](https://github.com/Keycapsss/3w6/blob/master/cad/3w6-2040-plate-top.dxf)
+
 ## Initial test
 
 All PCB's are tested and the VIAL QMK firmware is already flashed on both sides.
