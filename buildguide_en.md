@@ -23,15 +23,18 @@
 | Choc V1 switches     | 34  |                                   |
 | Choc V1 keycaps      | 34  |                                   |
 | LiPo 1S 3.7V battery | 2   | Optional with a JST ACH connector |
-| Screwdriver          |     | PZ1                               |
+| Screwdriver          |     | Torx T6                               |
 
 ## Battery
 
 You need a Lipo 3.7V (1 cell) battery.
+The battery should have the max. dimensions to fit in the case.  
+Width: 15mm Length: 34mm, Thickness: 3mm
 
 The board has a JST ACH connector or if your battery does not have the right connector, your can solder the two cable direct on the PCB.
 
 [![401230 LiPo 1cell 3.7v battery](img/a17de550b718850611903ab1557a6545_MD5.jpg)](img/a17de550b718850611903ab1557a6545_MD5.jpg)
+*401230 Lipo with 120mAh and a JST ACH connector*
 
 ![Lipo battery soldered](img/lipo-battery-1.jpg)
 *Lipo battery without JST connector, with cables directly soldered to the PCB.  
@@ -39,16 +42,17 @@ The board has a JST ACH connector or if your battery does not have the right con
 
 ### Where to buy
 
-- [Aliexpress Lipo 120mAh with JST ACH connector](https://s.click.aliexpress.com/e/_EuJ4GwD)
+You can search for "301230 lipo" or "401230 lipo".  
+Below is a handpicked list of compatible batteries.
 
+- [Aliexpress (Int) - Lipo 120mAh with JST ACH connector *](https://s.click.aliexpress.com/e/_EuJ4GwD)
+- [Little Keyboards (US)](https://www.littlekeyboards.com/collections/miscellaneous/products/battery-w-jst-connector)
+- [Powercells (DE) - JST-P connector must be removed](https://powercells.de/110mah-401230-lipo-3-7v-akku.html)
+- [Amazon (DE) - 301230 110 mAh withou connector *](https://amzn.to/3EdJCsy)
 ## Screws
 
-Use a Phillips screwdriver of the most appropriate size to avoid damaging the screw.  
-I have found a PZ1 to work well.  
-Tighten the screws carefully, they are made of soft metal.  
+Use a Torx T6 screwdriver and tighten the screws carefully to avoid damage.  
 The set includes some spare screws.
-
-[![Phillips screwdriver bit and M3 screws](img/632b9bd9da21688f901337feab7e3e72_MD5.jpg)](img/632b9bd9da21688f901337feab7e3e72_MD5.jpg)
 
 ## Assembly
 
@@ -97,3 +101,5 @@ The pre flashed firmware has ZMK Studio enabled.
 ZMK will automatically start advertising to allow new hosts to connect. From your computer, go to the bluetooth preferences and add a device. You should see a device named "Forager" in the list. Click that item to connect. Once connected over bluetooth, you should be able to start typing.
 
 To use more than one host/device with you Forager, you'll need to use different profiles to manage the connection/communication with each device. To learn more, read up on ZMK's [bluetooth feature](https://zmk.dev/docs/features/bluetooth).
+
+[* affiliated links]
