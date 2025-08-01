@@ -4,12 +4,12 @@ module.exports = {
     titleTemplate: '%s · Keycapsss Help Site',
     description:
       'Build-Guides, FAQ and other related information for Keycapsss products.',
-    url: 'https://keycapsss.com', // No trailing slash allowed!
+    url: 'https://help.keycapsss.com', // No trailing slash allowed!
     image: '/keycapsss.jpg', // Path to the image placed in the 'static' folder, in the project's root directory.
     twitterUsername: '@keycapsss',
     author: `Keycapsss`,
   },
-  pathPrefix: `/help`,
+  // pathPrefix: `/help`,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-postcss`,
