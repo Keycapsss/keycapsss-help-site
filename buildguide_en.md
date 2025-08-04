@@ -364,4 +364,4 @@ If you don't want to use the underglow function with the WS2812 LED's, then brid
 
 ## Schematic
 
-[![Lily58L schematic](img/Lily58L-schematic.png)](img/Lily58L-schematic.png)
+![Lily58L schematic](img/Lily58L-schematic.png)
