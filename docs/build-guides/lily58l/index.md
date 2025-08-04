@@ -11,27 +11,27 @@ You can find the build guide for Rev1 [here](https://github.com/Keycapsss/Lily58
 
 ### Required parts
 
-Part name | Quantity | Remarks | Photo |
-| ------- | -------- | ------- | ----- |
-| Lily58L PCB | 2 pcs ||
-| Lily58L case | 1 set | 2 solid panels, 2 with holes for switches |
-| [Pro Micro](https://keycapsss.com/keyboard-parts/parts/79/arduino-pro-micro-atmega32u4-controller), [Puchi-C](https://keycapsss.com/keyboard-parts/mcu-controller/141/puchi-c-pro-micro-replacement-with-usb-c-and-atmega32u4) or Elite-C | 2 pcs (a mix is possible) | Optionally, use [Mill-Max Single Row Socket Headers](https://keycapsss.com/keyboard-parts/parts/100/single-row-socket-headers-pins-mill-max-series-315), to make it hot-swappable. ||
-| Key switch (MX) | 58 pcs |  ||
-| [Kailh switch socket](https://keycapsss.com/keyboard-parts/parts/49/kailh-hot-swap-pcb-sockets-10-pcs) | 58 pcs |  ||
-| Diodes 1N4148W (SMD) | 58 pcs |||
-| TRRS jack | 2 pcs ||
-| Tactile switch | 2 pcs | Reset switch ||
-| TRRS cable | 1 cable | Must be a 4-pole cable ||
-| Key caps | 58 pcs | 1.5U caps, can also be 1U ||
-| Micro USB or USB-C cable | 1 pcs | Dependent what you use on the master half. ||
+| Part name                                                                                                                                                                                                                                 | Quantity                  | Remarks                                                                                                                                                                            | Photo |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----- |
+| Lily58L PCB                                                                                                                                                                                                                               | 2 pcs                     |                                                                                                                                                                                    |
+| Lily58L case                                                                                                                                                                                                                              | 1 set                     | 2 solid panels, 2 with holes for switches                                                                                                                                          |
+| [Pro Micro](https://keycapsss.com/keyboard-parts/parts/79/arduino-pro-micro-atmega32u4-controller), [Puchi-C](https://keycapsss.com/keyboard-parts/mcu-controller/141/puchi-c-pro-micro-replacement-with-usb-c-and-atmega32u4) or Elite-C | 2 pcs (a mix is possible) | Optionally, use [Mill-Max Single Row Socket Headers](https://keycapsss.com/keyboard-parts/parts/100/single-row-socket-headers-pins-mill-max-series-315), to make it hot-swappable. |       |
+| Key switch (MX)                                                                                                                                                                                                                           | 58 pcs                    |                                                                                                                                                                                    |       |
+| [Kailh switch socket](https://keycapsss.com/keyboard-parts/parts/49/kailh-hot-swap-pcb-sockets-10-pcs)                                                                                                                                    | 58 pcs                    |                                                                                                                                                                                    |       |
+| Diodes 1N4148W (SMD)                                                                                                                                                                                                                      | 58 pcs                    |                                                                                                                                                                                    |       |
+| TRRS jack                                                                                                                                                                                                                                 | 2 pcs                     |                                                                                                                                                                                    |
+| Tactile switch                                                                                                                                                                                                                            | 2 pcs                     | Reset switch                                                                                                                                                                       |       |
+| TRRS cable                                                                                                                                                                                                                                | 1 cable                   | Must be a 4-pole cable                                                                                                                                                             |       |
+| Key caps                                                                                                                                                                                                                                  | 58 pcs                    | 1.5U caps, can also be 1U                                                                                                                                                          |       |
+| Micro USB or USB-C cable                                                                                                                                                                                                                  | 1 pcs                     | Dependent what you use on the master half.                                                                                                                                         |       |
 
 ### Optionally parts
 
-Part name | Quantity | Remarks | Photo |
-| ------- | -------- | ------- | ----- |
-| [OLED module 0.91](https://keycapsss.com/keyboard-parts/parts/80/ssd1306-oled-lcd-display-0.91-inch-128x32-i2c-white) | 2 pcs | It is possible to use only one display ||
-| WS2812 (5050) | 12 pcs | RGB LED's for underglow ||
-| SK6812 Mini-E | 58 pcs |RGB LED's for keycap backlight **(underglow LED's must be soldered, because they are connected in series)** ||
+| Part name                                                                                                             | Quantity | Remarks                                                                                                     | Photo |
+| --------------------------------------------------------------------------------------------------------------------- | -------- | ----------------------------------------------------------------------------------------------------------- | ----- |
+| [OLED module 0.91](https://keycapsss.com/keyboard-parts/parts/80/ssd1306-oled-lcd-display-0.91-inch-128x32-i2c-white) | 2 pcs    | It is possible to use only one display                                                                      |       |
+| WS2812 (5050)                                                                                                         | 12 pcs   | RGB LED's for underglow                                                                                     |       |
+| SK6812 Mini-E                                                                                                         | 58 pcs   | RGB LED's for keycap backlight **(underglow LED's must be soldered, because they are connected in series)** |       |
 
 ## Introduction
 
@@ -66,7 +66,7 @@ Then solder the remaining side.
 
 When all diodes have been soldered, check for missing spots.
 
-*[Placeholder: image with all diode marked]* 
+*[Placeholder: image with all diode marked]*
 
 > You can use a multimeter on the front side of the board to ensure that the solder connections are good and that the orientation of the diodes is correct.
 
@@ -86,7 +86,7 @@ The LED's are connected in series. If a LED is broken or has bad solder connecti
 
 > It is necessary to solder all WS2812 LED's (underglow) in the previous step, to use the LED's for the per switch RGB (all LED's are connected in series).
 
-Solder the SK6812 Mini-E LED's (with legs), on the **back side** of the board.  
+Solder the SK6812 Mini-E LED's (with legs), on the **back side** of the board.
 **Pay attention to orientation of the LED's.**
 
 We solder LED's using the same approach as for the diodes. In that case: tin one pad, put the LED on, reflow, solder the other three pins.
@@ -101,10 +101,10 @@ It is necessary to solder all LED's, even if you use the rotary encoder.
 
 ![](img/sk6812-mini-e-led-3.jpg)
 
-For the LED's it's important to keep the heating as short as possible. Try to not touch the LED itself with the iron but rather only the solder that's supposed to connect to the metal pin. Use flux. 
+For the LED's it's important to keep the heating as short as possible. Try to not touch the LED itself with the iron but rather only the solder that's supposed to connect to the metal pin. Use flux.
 The LED's are connected in series. If a led is broken or has bad solder connections, the following LED's will either not light up at all or will light up in a different color than the default (red).
 Double-check the last LED that lights up properly and the first that doesn't.
-On the LED's with legs it's easily possible to get a loose connection. 
+On the LED's with legs it's easily possible to get a loose connection.
 
 ## Soldering the TRRS jack and reset switch
 
@@ -125,14 +125,14 @@ Attach the connector for the OLED on front side (opposite side of diodes). Be ca
 
 ### Some tips for installing the OLED on the socket
 
-- if you soldered the socket for the OLED, remove the black plastic thingy that's part of the header installed in the OLED. The you'll be able to shorten it's legs with your pliers and put them into the socket, resulting into a way more low profile OLED.  
+- if you soldered the socket for the OLED, remove the black plastic thingy that's part of the header installed in the OLED. The you'll be able to shorten it's legs with your pliers and put them into the socket, resulting into a way more low profile OLED.
 - If you do not have sockets installed, you can add height to the oled, by removing pins out of headers, and putting the empty black plastics part onto the headers of the OLED.
 
 > Add image here: "Soldered 4pin socket for Oled"
 
 ## Install Pro Micro (with sockets)
 
-**Before installing the Pro Micro (or other Micro Controller), check whether they are working by plugging them in and flashing the default keymap.  
+**Before installing the Pro Micro (or other Micro Controller), check whether they are working by plugging them in and flashing the default keymap.
 [You can find more information about this topic here.](#flash-keymap-on-pro-micro)**
 
 **When Installing the Pro Micro Puchi-C or Elite C, be sure it has the right orientation! The chips on the Board have to face downward and the USB Port is on the upper edge of your Board.**
@@ -191,7 +191,7 @@ The image shows a soldered MX socket.
 
 The sockets take **way** more solder than the other components like the LED's and the diodes. But don't exaggerate...
 
-![Kailh Hot-Swap Sockets](/img/kailh-sockets-1.jpg)
+![Kailh Hot-Swap Sockets](img/kailh-sockets-1.jpg)
 
 ## Install the Pimoroni Trackball (optionally)
 
@@ -201,7 +201,7 @@ Solder the included header pin to the module.
 
 ![Pimoroni Trackball Header Pins](img/pimoroni-trackball-module-1.jpg)
 
-Carefully remove the black plastic from the pins.  
+Carefully remove the black plastic from the pins.
 With a pliers you can push up the plastic, to remove it.
 
 ![Pimoroni Trackball remove plastic](img/pimoroni-trackball-module-2.jpg)
@@ -214,8 +214,8 @@ Bridge the jumper on the top side of the pcb.
 
 ![Pimoroni Trackball bridge jumper](img/pimoroni-trackball-module-4.jpg)
 
-Attach (not solder) the trackball module to the pcb. Then put the case top plate on top and fix it with 2-4 switches.  
-This way the trackball module sits perfect in the right place.  
+Attach (not solder) the trackball module to the pcb. Then put the case top plate on top and fix it with 2-4 switches.
+This way the trackball module sits perfect in the right place.
 Now you can solder the trackball module pins from the back side.
 
 ![Pimoroni Trackball remove plastic](img/pimoroni-trackball-module-5.jpg)
@@ -238,7 +238,7 @@ Attach the top plate spacers for alignment. (MX: 7mm Choc: 4mm)
 
 Attach four key switches to the top plate. (In the case of Choc switches, starting with two switches in the plate may be easier.)
 ![2019-01-26 14 58 48](https://user-images.githubusercontent.com/6285554/51967380-87a49680-24b2-11e9-80b9-a45564afc8cf.jpg)
-  
+
 Insert the switch into the board for alignment, and line up the components.
 ![2019-01-26 15 01 12](https://user-images.githubusercontent.com/6285554/51967478-c3d7f700-24b2-11e9-9f2f-4e75efc215a1.jpg)
 
@@ -252,7 +252,7 @@ After mounting the plate, push the switches again to make sure that installation
 ### Pro Micro protective acrylic installation
 
 Peel off the protective plastic layer covering the acrylic, and attach the acrylic to the board.
-**Mount with the wider side (labeled "幅が広い" here) outwards.** 
+**Mount with the wider side (labeled "幅が広い" here) outwards.**
 
 ![Attach with screws](https://user-images.githubusercontent.com/6285554/48837829-c4288780-edc9-11e8-8efb-6714d8e68e92.png).
 
@@ -263,7 +263,7 @@ Peel off the protective plastic layer covering the acrylic, and attach the acryl
 The board requires a keymap in order to function. This section assumes that you're familiar with keymaps and the use of the QMK tool. If not, please refer to [the QMK "Getting Started" guide](https://docs.qmk.fm/#/getting_started_build_tools) (Windows: MSYS2; Mac, Linux: avrdude)
 
 The [QMK Toolbox](https://github.com/qmk/qmk_toolbox/releases) can be used to write non-customized keymaps via a GUI, avoiding the need to configure a local QMK environment. (For custom keymaps, it's recommended to build the full environment described above).
- 
+
 Clone/download the QMK firmware and execute the following in the [qmk_firmware](https://github.com/qmk/qmk_firmware) directory to write the default Lily58L keymap
 
     make lily58/light:lily58l:avrdude
@@ -296,7 +296,7 @@ If something doesn't work:
 
 ### Q. One or more rows/columns of key switches do not respond
 
-A. The Pro Micro board may not be soldered and attached firmly. Check again, and re-solder and reinstall if necessary.  
+A. The Pro Micro board may not be soldered and attached firmly. Check again, and re-solder and reinstall if necessary.
 Also check the solder points for bridges.
 
 ### Q. A single key switch doesn't respond
@@ -308,7 +308,7 @@ After removing the key switch, make sure that the pins aren't bent, and then pus
 
 In the case of badly attached socket:
 Re-solder the problem socket, or reflow and add solder if the joint is weak.
-  
+
 In the case of badly attached diode:
 Check the direction of the diode in question. If it is wrong, remove it and re-solder it. Additionally, if there isn't enough solder, please re-solder.
 
@@ -336,15 +336,15 @@ If you get an error, please double-check the board, connection and command.
 
 ### Handedness by EEPROM
 
-You can tell each side of the Keyboard, whether it's left or right, by writing it into it's eeprom.  
+You can tell each side of the Keyboard, whether it's left or right, by writing it into it's eeprom.
 In order to do so, first put
 
     #define EE_HANDS
 
-into your `config.h`.  
+into your `config.h`.
 Then flash the keymap with
 
-    make make lily58/light:(yourkeymap):avrdude-split-left 
+    make make lily58/light:(yourkeymap):avrdude-split-left
 and
 
     make make lily58/light:(yourkeymap):avrdude-split-right
