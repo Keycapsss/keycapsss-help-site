@@ -31,17 +31,18 @@ export default defineConfig({
       {
         text: "Build-Guides",
         items: [
+          { text: "3W6", link: "/build-guides/3w6/" },
           { text: "Forager", link: "/build-guides/forager/" },
           { text: "Kimiko", link: "/build-guides/forager/" },
         ],
       },
-      {
-        text: "Examples",
-        items: [
-          { text: "Markdown Examples", link: "/markdown-examples" },
-          { text: "Runtime API Examples", link: "/api-examples" },
-        ],
-      },
+      // {
+      //   text: "Examples",
+      //   items: [
+      //     { text: "Markdown Examples", link: "/markdown-examples" },
+      //     { text: "Runtime API Examples", link: "/api-examples" },
+      //   ],
+      // },
     ],
 
     socialLinks: [{ icon: "github", link: "https://github.com/keycapsss" }],
