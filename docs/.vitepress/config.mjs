@@ -36,6 +36,7 @@ export default defineConfig({
           { text: "Forager", link: "/build-guides/forager/" },
           { text: "Kimiko", link: "/build-guides/kimiko/" },
           { text: "Lily58L", link: "/build-guides/lily58l/" },
+          { text: "Plaid-Pad", link: "/build-guides/plaid-pad/" },
         ],
       },
       // {
