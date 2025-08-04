@@ -1,0 +1,49 @@
+import { defineConfig } from "vitepress";
+
+// https://vitepress.dev/reference/site-config
+export default defineConfig({
+  lang: "en-US",
+  title: "Keycapsss Help Site",
+  description: "Help site from Keycapsss.com with build-guides and news board.",
+  themeConfig: {
+    // https://vitepress.dev/reference/default-theme-config
+    // logo: "/keycapsss-logo.svg",
+    // siteTitle: false,
+    editLink: {
+      pattern:
+        "https://github.com/Keycapsss/keycapsss-help-site/edit/main/docs/:path",
+      text: "Edit this page on GitHub",
+    },
+    lastUpdated: {
+      text: "Updated at",
+      formatOptions: {
+        dateStyle: "full",
+        timeStyle: "medium",
+      },
+    },
+    externalLinkIcon: true,
+    nav: [
+      // { text: "Home", link: "/" },
+      // { text: "Build-Guides", link: "/build-guides/forager/" },
+    ],
+
+    sidebar: [
+      {
+        text: "Build-Guides",
+        items: [
+          { text: "Forager", link: "/build-guides/forager/" },
+          { text: "Kimiko", link: "/build-guides/forager/" },
+        ],
+      },
+      {
+        text: "Examples",
+        items: [
+          { text: "Markdown Examples", link: "/markdown-examples" },
+          { text: "Runtime API Examples", link: "/api-examples" },
+        ],
+      },
+    ],
+
+    socialLinks: [{ icon: "github", link: "https://github.com/keycapsss" }],
+  },
+});
