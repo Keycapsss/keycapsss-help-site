@@ -37,6 +37,7 @@ export default defineConfig({
           { text: "Kimiko", link: "/build-guides/kimiko/" },
           { text: "Lily58L", link: "/build-guides/lily58l/" },
           { text: "Plaid-Pad", link: "/build-guides/plaid-pad/" },
+          { text: "Puchi-BLE", link: "/build-guides/puchi-ble/" },
           { text: "Reviung41", link: "/build-guides/reviung41/" },
         ],
       },
