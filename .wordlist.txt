@@ -1,0 +1,12 @@
+keycap
+keycaps
+keycapsss
+keymap
+macos
+bom
+bootloader
+config
+zmk
+Aliexpress
+lipo
+Configurator
