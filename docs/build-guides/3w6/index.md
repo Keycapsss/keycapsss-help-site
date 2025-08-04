@@ -8,12 +8,12 @@
 
 ### Parts included in the kit
 
-| Part name     | Qty | Remarks                                  |
-| :------------ | :-- | :--------------------------------------- |
-| Top plates    | 2   | Nr. 1 on the image below                 |
-| Spacer plates | 2   | Nr. 2 on the image below, 3D printed PLA |
-| PCB's         | 2   | Nr. 3 on the image below                 |
-| Foam          | 2   | Nr. 4 on the image below, self-adhesive  |
+| Part name     | Qty  | Remarks                                  |
+| :------------ | :--- | :--------------------------------------- |
+| Top plates    | 2    | Nr. 1 on the image below                 |
+| Spacer plates | 2    | Nr. 2 on the image below, 3D printed PLA |
+| PCB's         | 2    | Nr. 3 on the image below                 |
+| Foam          | 2    | Nr. 4 on the image below, self-adhesive  |
 
 ![Kit parts](img/3w6-split-keyboard-kit-black-pcb-2.jpg)
 
@@ -29,13 +29,13 @@
 
 ### Optional parts
 
-| Part name                 | Qty | Remarks                   |
-| ------------------------- | --- | ------------------------- |
-| Pimoroni Trackball module | 1   | Support on both half's simultaneously, or only one side  |
+| Part name                 | Qty | Remarks                                                 |
+| ------------------------- | --- | ------------------------------------------------------- |
+| Pimoroni Trackball module | 1   | Support on both half's simultaneously, or only one side |
 
 ## CAD files
 
-- Top plate [dxf file](https://github.com/Keycapsss/3w6/blob/master/cad/3w6-2040-plate-top.dxf)
+- Top plate [dxf file](https://github.com/Keycapsss/keycapsss-help-site/docs/build-guides/3w6/cad/)
 
 ## Initial test
 
@@ -45,7 +45,7 @@ I recommend to test each switch position for functionality, before you solder th
 
 Connect both half's with a USB-C to USB-C cable and connect one side with a USB-C cable to your computer.
 
-> The pre flashed firmware use ["Handedness by EEPROM"](https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-eeprom), so it does not matter which half is master (connected to the computer).  
+> The pre flashed firmware use ["Handedness by EEPROM"](https://docs.qmk.fm/#/feature_split_keyboard?id=handedness-by-eeprom), so it does not matter which half is master (connected to the computer).
 > The layout can be mirrored if "Handedness by EEPROM" is not used.
 
 Open [QMK Configurator page](https://config.qmk.fm/#/test) and bridge each switch solder point pair with a tweezers. It should trigger a key press. If not please contact me.
@@ -71,16 +71,16 @@ Check carefully if all switch pins are staight.
 
 ![3w6 top plate with switches from bottom view](img/3w6-split-keyboard-kit-black-pcb-build-guide-1.jpg)
 
-Put the 3D printed spacer on the back of the top plate.  
+Put the 3D printed spacer on the back of the top plate.
 
 ![3w6 3d printed spacer plates on top of the PCB's](img/3w6-split-keyboard-kit-black-pcb-build-guide-3.jpg)
 
-Place the pcb (SMD components must face down) on the top plate with the switches spacer.  
+Place the pcb (SMD components must face down) on the top plate with the switches spacer.
 Do not press to hard. Check if all switch pins are align with the holes in the PCB.
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-4.jpg)
 
-If all switch pins are aligned, press the top plate and the PCB together.  
+If all switch pins are aligned, press the top plate and the PCB together.
 If you have problems to close the gap, probably a switch pin is bent.
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-5.jpg)
@@ -95,7 +95,7 @@ Open [QMK Configurator page](https://config.qmk.fm/#/test) and test if all switc
 
 If everything works as expected, you can attach the self-adhesive foam to the underside.
 
-The complete assembled 3W6 Split Keyboard should have 4 layers  
+The complete assembled 3W6 Split Keyboard should have 4 layers
 *The self-adhesive protection foil was not removed for demonstration purpose.*
 
 ![alt](img/3w6-split-keyboard-kit-black-pcb-build-guide-7.jpg)
@@ -130,12 +130,12 @@ This 3W6 keyboard supports a trackball module on both sides (left side only, rig
 The trackball module is already activated in the default flashed firmware.
 
 The trackball is connected via I2C to the mcu.
-Since Rev1.1 the INT (interrupt pin) is connected to the GPIO24 pin.  
+Since Rev1.1 the INT (interrupt pin) is connected to the GPIO24 pin.
 Right now *(05.2023)* the QMK [driver for the Pimoroni Trackball module](https://docs.qmk.fm/#/feature_pointing_device?id=pimoroni-trackball) do not use the INT pin.
 
 ### Trackball module assembly
 
-1. Solder the header pin to the module (plastic part at the bottom).  
+1. Solder the header pin to the module (plastic part at the bottom).
    Carefully remove the plastic from the header pins (marked red) with pliers.
 
    ![alt](img/3w6-pimoroni-trackball-1.jpg)
@@ -143,8 +143,8 @@ Right now *(05.2023)* the QMK [driver for the Pimoroni Trackball module](https:/
 
    ![alt](img/3w6-pimoroni-trackball-2.jpg)
 
-3. Place the module on the top side of the pcb. The module should sit on the pcb, without a gap (green arrow).  
-   The module should be align with the white tactile switch next to it. If not, it could be that the plastic cover of the trackball do not fit in the cutout in the top plate.  
+3. Place the module on the top side of the pcb. The module should sit on the pcb, without a gap (green arrow).
+   The module should be align with the white tactile switch next to it. If not, it could be that the plastic cover of the trackball do not fit in the cutout in the top plate.
    Solder the header pins from the bottom.
 
    ![alt](img/3w6-pimoroni-trackball-3.jpg)
