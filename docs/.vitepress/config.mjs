@@ -33,7 +33,7 @@ export default defineConfig({
         items: [
           { text: "3W6", link: "/build-guides/3w6/" },
           { text: "Forager", link: "/build-guides/forager/" },
-          { text: "Kimiko", link: "/build-guides/forager/" },
+          { text: "Kimiko", link: "/build-guides/kimiko/" },
           { text: "Lily58L", link: "/build-guides/lily58l/" },
         ],
       },
