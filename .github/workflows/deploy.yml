@@ -1,5 +1,6 @@
 name: Deploy static web app
 on:
+  workflow_dispatch:
   push:
     branches:
       - main # Triggers the action on push to the 'main' branch
