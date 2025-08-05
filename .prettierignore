@@ -1,11 +1,15 @@
 .vscode
 
 *.min.js
-**/node_modules/**
 
 # cache-dirs
 **/.cache
+**/cache
 
 # npm
 package.json
 package-lock.json
+**/node_modules/**
+
+# vitepress
+**/.vitepress/dist
