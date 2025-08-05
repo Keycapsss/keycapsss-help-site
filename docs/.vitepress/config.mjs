@@ -12,7 +12,7 @@ export default defineConfig({
     // siteTitle: false,
     editLink: {
       pattern:
-        "https://github.com/Keycapsss/keycapsss-help-site/edit/main/docs/:path",
+        "https://github.com/Keycapsss/keycapsss-help-site/edit/master/docs/:path",
       text: "Edit this page on GitHub",
     },
     lastUpdated: {
