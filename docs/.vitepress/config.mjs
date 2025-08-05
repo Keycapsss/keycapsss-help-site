@@ -5,6 +5,7 @@ export default defineConfig({
   lang: "en-US",
   title: "Keycapsss Help Site",
   description: "Help site from Keycapsss.com with build-guides and news board.",
+  ignoreDeadLinks: true,
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: "/keycapsss-logo.svg",
