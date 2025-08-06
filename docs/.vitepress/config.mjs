@@ -6,6 +6,9 @@ export default defineConfig({
   title: "Keycapsss Help Site",
   description: "Help site from Keycapsss.com with build-guides and news board.",
   ignoreDeadLinks: true,
+  sitemap: {
+    hostname: "https://help.keycapsss.com",
+  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     // logo: "/keycapsss-logo.svg",
