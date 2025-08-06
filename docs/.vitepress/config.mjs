@@ -33,6 +33,10 @@ export default defineConfig({
 
     sidebar: [
       {
+        text: "Shop Now",
+        link: "https://keycapsss.com",
+      },
+      {
         text: "Build-Guides",
         items: [
           { text: "3W6", link: "/build-guides/3w6/" },
@@ -46,15 +50,17 @@ export default defineConfig({
           { text: "Reviung41", link: "/build-guides/reviung41/" },
         ],
       },
-      // {
-      //   text: "Examples",
-      //   items: [
-      //     { text: "Markdown Examples", link: "/markdown-examples" },
-      //     { text: "Runtime API Examples", link: "/api-examples" },
-      //   ],
-      // },
     ],
 
-    socialLinks: [{ icon: "github", link: "https://github.com/keycapsss" }],
+    socialLinks: [
+      // You can add any icon from simple-icons (https://simpleicons.org/):
+      { icon: "github", link: "https://github.com/keycapsss" },
+      { icon: "discord", link: "https://discord.gg/frjFXZB" },
+      { icon: "mastodon", link: "https://chaos.social/deck/@keycapsss" },
+      {
+        icon: "telegram",
+        link: "https://t.me/joinchat/HUxXXhZeilwa0DS02G2N4A",
+      },
+    ],
   },
 });
