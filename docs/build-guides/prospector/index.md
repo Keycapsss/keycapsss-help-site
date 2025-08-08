@@ -1,3 +1,16 @@
+---
+outline: [2, 4]
+---
+# Prospector ZMK Dongle - Build Guide
+
+::: warning This build guide is in progress.
+Missing parts:
+
+- Images of the transparent light guide
+- Image of Xiao mounted in to the rear cap
+- Customize the firmware
+:::
+
 ## Parts included in the Kit
 
 ![Prospector Kit Parts](img/prospector-parts-1.jpg)
@@ -11,23 +24,27 @@
 | M2x6 pan/wafer head screws                                           | 4     |
 | M2.5x4 pan/wafer head screws                                         | 4     |
 
-## Other required items
+### Other required items
 
 - Soldering iron with adjustable temperature (320°C)
 - Solder (i use Sn99.3Cu0.7 0.5mm/0.02inch)
 - Flux
 - Tip cleaner (wet sponge or brass wool)
 - Side cutters/flush cutters
+- 1/16 hexagon screwdriver (1.5 metric will not work properly)
 
+## Assembly
 
-## Prepare the Display cable
+A build guide by Carrefinho is available [here]([https://](https://raw.githubusercontent.com/carrefinho/prospector/main/docs/prospector_assembly_manual.jpg)).
+
+### Prepare the Display cable
 
 You need some extra wires for the light sensor and the last 4 wires on the display cable are not connected later. So remove these and keep them for later.
 Use the tweezers to lift the platic and pull out the wire (only the green, orange, yellow and blue wire).
 
 ![](img/prospector-assembly-1.jpg)
 
-## Mount the display
+### Mount the display
 
 Connect the display cable.
 
@@ -39,10 +56,12 @@ Keep attention to the orientation of the display and it's cable.
 
 ![](img/prospector-assembly-3.jpg)
 
-## Solder wires
+### Solder wires
 
 Solder the wires to the light sensor like on the picture.
 Use 3 from the previouse saved wires and cut a piece of red and black wire from the display cable approximately 5 cm long.
+
+Cover the green power LED on the light sensor PCB with tape to prevent it from affecting the light sensor. Refer to the [wiring diagram](#wiring-diagram) to identify the correct position.
 
 ![](img/prospector-assembly-4.jpg)
 
@@ -65,12 +84,14 @@ Please pay attention that the three colored cable from the light sensor board ha
 Also the blue and purple wires are easy to confuse.
 :::
 
+#### Wiring diagram
+
 ![](img/prospector_wiring-1.png)
 _Source: [Prospector docs by carrefinho](https://github.com/carrefinho/prospector/blob/main/docs/prospector_assembly_manual.jpg)_
 
 Cut off the protruding pins with side cutters.
 
-## Complet the case
+### Complet the case
 
 Use the remaining 2x M2.5x4 screws to secure the rear cap to the main body.
 
@@ -80,8 +101,9 @@ Do not overtighten the screws, or the plastic threads will break!
 
 ![](img/prospector-assembly-8.jpg)
 
+## Firmware
 
-## Install Firmware
+### Install firmware
 
 Plug in the USB-C to the Prospector. A green led light should be visible at the top and the display blinks black.
 
@@ -96,4 +118,6 @@ The Prospector should display the standard screen as below.
 
 First factory resest if allready paired with a computer.
 
+### Customize the firmware
 
+[todo]
