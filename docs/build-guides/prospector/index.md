@@ -3,13 +3,16 @@ outline: [2, 4]
 ---
 # Prospector ZMK Dongle - Build Guide
 
-::: warning This build guide is in progress.
-Missing parts:
+> [!NOTE]
+> This build guide is in progress.
+> Missing parts:
+>
+> - Images of the transparent light guide
+> - Image of Xiao mounted in to the rear cap
+> - Customize the firmware
 
-- Images of the transparent light guide
-- Image of Xiao mounted in to the rear cap
-- Customize the firmware
-:::
+> [!IMPORTANT]
+> Do not press the reset button on the rear cap unless an XIAO is installed (doing so will break it).
 
 ## Parts included in the Kit
 
