@@ -29,12 +29,13 @@ outline: [2, 4]
 
 ### Other required items
 
+- 1/16 hexagon screwdriver (1.5 metric will not work properly) for M2.5 screws
+- 0.05" or 1.3mm hexagon screwdriver for M2 screws
 - Soldering iron with adjustable temperature (320°C)
 - Solder (i use Sn99.3Cu0.7 0.5mm/0.02inch)
 - Flux
 - Tip cleaner (wet sponge or brass wool)
 - Side cutters/flush cutters
-- 1/16 hexagon screwdriver (1.5 metric will not work properly)
 
 ## Assembly
 
