@@ -111,7 +111,7 @@ The ATMEGA328 has to be attached in a __specific direction__. Check the notch on
 
 ![alt](img/plaid-pad-atmega329p-1.jpg)
 
-### OLED display (SSD1306)
+### Optional OLED display (SSD1306)
 
 Add isolation tape to the back of the OLED, to protect the components for shorts.
 
@@ -129,8 +129,9 @@ Place the OLED like on the image and solder it from the bottom to the PCB.
 
 ## Test
 
-_Bootloader and Firmware (VIA keymap) are already on the ATmega328P chip.
-Everything should work after soldering._
+> [!NOTE]
+> Bootloader and Firmware (QMK VIAL) are already on the ATmega328P chip.
+Everything should work after soldering.
 
 Connect the Plaid-Pad to your computer and open the [QMK-Test-Site](https://config.qmk.fm/#/test).
 
@@ -201,7 +202,7 @@ Put the rubber feeds on the back of the Plaid-Pad.
 
 __The assembly is done.__ 🥳
 
-You can change the keymap with [VIA](./README.md#qmk-with-via-support-no-rotary-encoder-support) (**no** rotary encoder support), [VIAL](https://get.vial.today) (with rotary encoder support),
+You can change the keymap with [VIAL](https://get.vial.today),
 or change the [QMK keymap](https://github.com/BenRoe/Plaid-Pad#qmk-default-keymap) file and reflash the firmware.
 
 ## How to flash the firmware
