@@ -155,6 +155,8 @@ Pay attention that no solder flows into the holtite.
 
 ## Case assembly
 
+<YouTubeEmbed video-id="HQoExdTddxo" />
+
 __Before you solder the switches,__ attach the 4x 5mm spacer to the pcb with the M2x4mm screws.
 __Don't solder the rotary encoder yet.__
 
