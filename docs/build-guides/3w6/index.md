@@ -35,7 +35,7 @@
 
 ## CAD files
 
-- Top plate [dxf file](https://github.com/Keycapsss/keycapsss-help-site/docs/build-guides/3w6/cad/)
+- Top plate [dxf file](https://github.com/Keycapsss/keycapsss-help-site/blob/master/docs/build-guides/3w6/cad/3w6-2040-plate-top.dxf)
 
 ## Initial test
 
