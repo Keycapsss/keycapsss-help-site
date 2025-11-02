@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
+import type { DefaultTheme } from "vitepress";
 
-// https://vitepress.dev/reference/site-config
 export default defineConfig({
   lang: "en-US",
   title: "Keycapsss Help Site",
@@ -63,4 +63,4 @@ export default defineConfig({
       },
     ],
   },
-});
+} satisfies DefaultTheme.Config);
