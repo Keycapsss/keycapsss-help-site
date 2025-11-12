@@ -11,6 +11,7 @@ export default {
   Layout: () => {
     return h(DefaultTheme.Layout, null, {
       "doc-after": () => h(Comentario),
+      "page-bottom": () => h(Comentario),
     });
   },
   enhanceApp(ctx) {

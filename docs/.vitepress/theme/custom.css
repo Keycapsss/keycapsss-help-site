@@ -3,3 +3,24 @@
   --vp-c-brand-1: #64ff64;
   --vp-c-brand-2: #0e6104;
 }
+
+/* Home/page layout also wraps content here */
+.VPPage {
+  padding: 1rem 4rem;
+}
+
+.VPPage h2 {
+  margin: 48px 0 16px;
+  letter-spacing: -0.02em;
+  line-height: 32px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Avoid extra padding on mobile */
+@media (max-width: 768px) {
+  .VPPage {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
