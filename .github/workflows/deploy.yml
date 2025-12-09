@@ -1,4 +1,4 @@
-name: 🚀 Deploy vitepress to help.keycapsss.com via ftps
+name: 🚀 Deploy vitepress to help.keycapsss.com
 on:
   workflow_dispatch:
   push:
@@ -8,12 +8,11 @@ on:
     #   - v*.*.* # Triggers the action on tag
 
 jobs:
-  web-deploy:
-    name: 🎉 Deploy
+  build:
+    name: 🚧 Build
     runs-on: ubuntu-latest
-
     steps:
-      - name: 🚚 Get latest code
+      - name: Get latest code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -23,16 +22,9 @@ jobs:
         with:
           node-version: "24"
 
-      # Step 3: Get tag version
       - name: Get tag version
         id: get_tag
         run: echo "TAG_VERSION=${GITHUB_REF#refs/tags/}" >> $GITHUB_ENV
-
-      # # Step 4: Load environment variables from file (.env)
-      # - name: Set environment variables from Dotenv
-      #   uses: c-py/action-dotenv-to-setenv@v5
-      #   with:
-      #     env-file: .env
 
       - name: Set environment variables from GitHub Secrets
         run: |
@@ -41,15 +33,44 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: 🔨 Build Vitepress site
+      - name: Build Vitepress site
         run: npm run docs:build # Assumes there's a build script in package.json
 
-      - name: 📂 Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
         with:
-          server: ${{ secrets.FTP_HOST }}
-          username: ${{ secrets.FTP_USERNAME }}
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./docs/.vitepress/dist/ # The local directory where the build output is located (adjust if necessary)
-          server-dir: ${{ secrets.FTP_PATH }} # The remote directory on the server
-          protocol: ftps
+          name: vitepress-dist
+          path: docs/.vitepress/dist/
+          retention-days: 1
+
+  deploy:
+    name: 🚀 Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: vitepress-dist
+          path: dist/
+
+      # - name: Clean target directory
+      #   uses: appleboy/ssh-action@master
+      #   with:
+      #     host: ${{ secrets.SSH_HOST }}
+      #     username: ${{ secrets.SSH_USERNAME }}
+      #     key: ${{ secrets.SSH_PRIVATE_KEY }}
+      #     port: ${{ secrets.SSH_PORT }}
+      #     script: |
+      #       rm -rf /data/coolify/services/pwogokkc8gggwc408s4kkos4/web/help.keycapsss.com/*
+
+      - name: Upload files via SCP
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USERNAME }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "dist/*"
+          target: "/data/coolify/services/pwogokkc8gggwc408s4kkos4/web/help.keycapsss.com"
+          strip_components: 1
