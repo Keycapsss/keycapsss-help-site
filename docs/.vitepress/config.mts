@@ -2,6 +2,13 @@ import { defineConfig } from "vitepress";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  vue: {
+    template: {
+      compilerOptions: {
+        isCustomElement: (tag) => tag.startsWith("comentario-"),
+      },
+    },
+  },
   lang: "en-US",
   title: "Keycapsss Help Site",
   description: "Help site from Keycapsss.com with build-guides and news board.",

@@ -15,6 +15,6 @@ export default {
     });
   },
   enhanceApp(ctx) {
-    ctx.app.component("YouTubeEmbed", YouTubeEmbed); // [!code ++]
+    ctx.app.component("YouTubeEmbed", YouTubeEmbed);
   },
 } satisfies Theme;

@@ -6,10 +6,16 @@
 </template>
 
 <script setup>
-import { onMounted } from "vue";
+import { onMounted, onUnmounted } from "vue";
 import { useComentario } from "../composables/useComentario";
 
+const comentario = useComentario();
+
 onMounted(() => {
-  useComentario().initialize();
+  comentario.initialize();
+});
+
+onUnmounted(() => {
+  comentario.cleanup();
 });
 </script>
