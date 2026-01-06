@@ -1,0 +1,25 @@
+# Stylelint configuration for VitePress project
+# See: https://stylelint.io/user-guide/configure
+
+# Extend the standard CSS configuration
+extends:
+  - stylelint-config-standard
+
+# Ignore build output and cache directories
+ignoreFiles:
+  - docs/.vitepress/dist/**
+  - docs/.vitepress/cache/**
+
+rules:
+  # selector-class-pattern: Enforce class name pattern
+  # Disabled: VitePress uses various class naming conventions (e.g., .VPButton, .vp-doc)
+  selector-class-pattern: null
+
+  # custom-property-pattern: Enforce CSS custom property (variable) naming pattern
+  # Disabled: Allow flexible naming for CSS variables (e.g., --vp-c-brand, --custom-color)
+  custom-property-pattern: null
+
+  # media-feature-range-notation: Enforce modern range notation in media queries
+  # Disabled: Allow both old (min-width: 768px) and new (width >= 768px) syntax
+  # VitePress and existing code use the traditional syntax
+  media-feature-range-notation: null

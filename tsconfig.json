@@ -1,0 +1,31 @@
+{
+  "compilerOptions": {
+    // Modern JavaScript output
+    "target": "ES2022",
+    "module": "ESNext",
+    // Vite/bundler-style module resolution
+    "moduleResolution": "bundler",
+    // Enable strict type checking
+    "strict": true,
+    // Preserve JSX for Vue
+    "jsx": "preserve",
+    // Allow importing JSON files
+    "resolveJsonModule": true,
+    // Required for bundlers
+    "isolatedModules": true,
+    // CommonJS interop
+    "esModuleInterop": true,
+    // Skip type checking node_modules
+    "skipLibCheck": true,
+    // Type-check only, no output files
+    "noEmit": true,
+    // VitePress-specific types
+    "types": ["vitepress/client"]
+  },
+  "include": [
+    "docs/.vitepress/**/*.ts",
+    "docs/.vitepress/**/*.mts",
+    "docs/.vitepress/**/*.vue"
+  ],
+  "exclude": ["node_modules", "docs/.vitepress/dist", "docs/.vitepress/cache"]
+}

@@ -225,7 +225,7 @@ Remove the black plastic spacer that's part of the header installed in the OLED.
 
 ## You have reached a checkpoint
 
-Plug your keyboard (**do not plug-in or remove the TRRS cable, while a Pro Micro is connected via USB**), look what happens, solve problems, be happy if there are none (if you followed all the steps your pro micros should have [firmware](#flash-keymap-on-pro-micro) at this point).  
+Plug your keyboard (**do not plug-in or remove the TRRS cable, while a Pro Micro is connected via USB**), look what happens, solve problems, be happy if there are none (if you followed all the steps your pro micros should have [firmware](#flash-keymap-on-pro-micropuchi-c) at this point).  
 
 By now you can also checked whether all switches will be able to work. In order to do so, open the [QMK Test Site](https://config.qmk.fm/#/test), short the pads on which the kailh sockets will be installed (next step) with tweezers.
 
@@ -385,7 +385,7 @@ Re-solder the problem socket, or reflow and add solder if the joint is weak.
 In the case of badly attached diode:
 Check the [direction of the diode](#attach-the-diodes) in question. If it is wrong, remove it and re-solder it. Additionally, if there isn't enough solder, please re-solder.
 
-### Q. Both half‘s are working as single, but if i connect them via TRRS cable one side is not working.
+### Q. Both half's are working as single, but if i connect them via TRRS cable one side is not working
 
 A. Check the TRRS jack solder points for bridges or cold solder points.
 
@@ -393,7 +393,7 @@ The TRRS cable should have 4 poles.
 
 Use a multimeter to check the cable. Each pole should only have connection to the opposite pole.
 
-### Q. One side does not respond.
+### Q. One side does not respond
 
 A. Check if all LED‘s have the correct orientation.
 

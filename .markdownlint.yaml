@@ -1,0 +1,67 @@
+# Markdownlint configuration for VitePress documentation
+# See: https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md
+
+# Enable all default rules
+default: true
+
+# MD007: Unordered list indentation
+# Disabled: VitePress and different editors handle list indentation differently
+MD007: false
+
+# MD012: Multiple consecutive blank lines
+# Disabled: Allow extra spacing for readability in long documents
+MD012: false
+
+# MD013: Line length
+# Disabled: Documentation often has long lines (tables, URLs, code examples)
+MD013: false
+
+# MD022: Headings should be surrounded by blank lines
+# Disabled: Allow flexible heading spacing for compact sections
+MD022: false
+
+# MD028: Blank line inside blockquote
+# Disabled: Allow multi-paragraph blockquotes with blank lines
+MD028: false
+
+# MD032: Lists should be surrounded by blank lines
+# Disabled: Allow lists without surrounding blank lines for compact formatting
+MD032: false
+
+# MD033: Inline HTML
+# Disabled: VitePress uses Vue components and HTML in markdown
+MD033: false
+
+# MD041: First line in file should be top-level heading
+# Disabled: VitePress uses YAML frontmatter at the top of files
+MD041: false
+
+# MD045: Images should have alternate text (alt text)
+# Disabled for now: Many images need alt text - fix incrementally
+# TODO: Re-enable this rule after adding alt text to existing images
+MD045: false
+
+# MD047: Files should end with a single newline character
+# Disabled: Will be enforced by .editorconfig instead
+MD047: false
+
+# MD049: Emphasis style
+# Disabled: Allow both *emphasis* and _emphasis_ styles
+MD049: false
+
+# MD055: Table pipe style
+# Disabled: Allow flexible table formatting
+MD055: false
+
+# MD056: Table column count
+# Disabled: Some tables intentionally have varying column counts
+MD056: false
+
+# MD059: Link text should be descriptive
+# Disabled for now: Many "here" and "click here" links - fix incrementally
+# TODO: Re-enable after making links more descriptive
+MD059: false
+
+# MD060: Table column style
+# Disabled: Allow flexible table column spacing
+MD060: false
