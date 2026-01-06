@@ -1,11 +1,13 @@
 <template>
   <div class="comentario-section vp-doc">
-    <h2 id="comments">Comments</h2>
-    <comentario-comments></comentario-comments>
+    <h2 id="comments">
+      Comments
+    </h2>
+    <comentario-comments />
   </div>
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted, onUnmounted } from "vue";
 import { useComentario } from "../composables/useComentario";
 
