@@ -1,8 +1,11 @@
 import { useRoute } from "vitepress";
 
-const COMENTARIO_URL = "https://comments.keycapsss.com";
+const COMENTARIO_URL = "https://comments.benroe.de";
 
-export function useComentario(): { initialize: () => void; cleanup: () => void } {
+export function useComentario(): {
+  initialize: () => void;
+  cleanup: () => void;
+} {
   const route = useRoute();
   let observer: MutationObserver | null = null;
 
