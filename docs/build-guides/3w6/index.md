@@ -22,7 +22,7 @@
 | Part name                      | Qty | Remarks                                    |
 | ------------------------------ | --- | ------------------------------------------ |
 | Choc V1 switches               | 36  | Choc V2 switches are __not__ supported     |
-| 1U Choc keycaps (Lo Profile)   | 24  | MX keycaps are __not__ supported           |
+| 1U Choc keycaps (Lo Profile)   | 34  | MX keycaps are __not__ supported           |
 | 1.5U Choc keycaps (Lo Profile) | 2   | MX keycaps are __not__ supported           |
 | USB-C cable                    | 1   | To connect the keyboard to your computer   |
 | USB-C to USB-C cable           | 1   | To connect both halfs, 20cm lenght is good |
